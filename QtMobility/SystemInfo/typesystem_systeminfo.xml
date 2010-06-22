@@ -4,7 +4,7 @@
 
     <enum-type name="QtMobility::QSystemDeviceInfo::BatteryStatus"/>
     <enum-type name="QtMobility::QSystemDeviceInfo::PowerState"/>
-    <enum-type name="QtMobility::QSystemDeviceInfo::InputMethod"/>
+    <enum-type name="QtMobility::QSystemDeviceInfo::InputMethod" flags="QtMobility::QSystemDeviceInfo::InputMethodFlags"/>
     <enum-type name="QtMobility::QSystemDeviceInfo::Profile"/>
     <enum-type name="QtMobility::QSystemDeviceInfo::SimStatus"/>
     <enum-type name="QtMobility::QSystemDisplayInfo::DisplayOrientation"/>
@@ -14,7 +14,7 @@
     <enum-type name="QtMobility::QSystemNetworkInfo::NetworkMode"/>
     <enum-type name="QtMobility::QSystemStorageInfo::DriveType"/>
 
-    <namespace-type name="QtMobility"/>
+    <namespace-type name="QtMobility" generate="no"/>
 
     <object-type name="QtMobility::QSystemDeviceInfo" target-lang-name="QSystemDeviceInfo"/>
     <object-type name="QtMobility::QSystemDisplayInfo" target-lang-name="QSystemDisplayInfo"/>

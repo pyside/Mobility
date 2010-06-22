@@ -7,7 +7,6 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsysteminfo_wr
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemnetworkinfo_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemscreensaver_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemstorageinfo_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/systeminfo_module_wrapper.cpp
 )
 
