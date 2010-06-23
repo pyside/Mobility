@@ -38,7 +38,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules/
 find_package(PythonLibs REQUIRED)
 find_package(PythonInterp REQUIRED)
 find_package(Shiboken REQUIRED)
-find_package(PySide REQUIRED)
+find_package(PySide 0.3.3 EXACT REQUIRED)
 find_package(Qt4 4.6.2 REQUIRED)
 SET(SUPPORTED_QT_VERSION "4.6.0")
 find_package(QtMobility 1.0.0 REQUIRED )
