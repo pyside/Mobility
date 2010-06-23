@@ -37,3 +37,4 @@ execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_SOUR
                                                            "${CMAKE_BINARY_DIR}/${BINDING_NAME}/__init__.py")
 
 add_subdirectory(SystemInfo)
+add_subdirectory(Location)

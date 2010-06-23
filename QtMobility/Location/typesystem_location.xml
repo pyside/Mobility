@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Location">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+
+    <enum-type name="QtMobility::QGeoCoordinate::CoordinateType"/>
+    <enum-type name="QtMobility::QGeoCoordinate::CoordinateFormat"/>
+    <enum-type name="QtMobility::QGeoPositionInfo::Attribute"/>
+    <enum-type name="QtMobility::QGeoPositionInfoSource::PositioningMethod" flags="QtMobility::QGeoPositionInfoSource::PositioningMethods"/>
+    <enum-type name="QtMobility::QGeoSatelliteInfo::Attribute"/>
+    <enum-type name="QtMobility::QNmeaPositionInfoSource::UpdateMode"/>
+
+    <namespace-type name="QtMobility" generate="no"/>
+
+    <object-type name="QtMobility::QGeoAreaMonitor" target-lang-name="GeoAreaMonitor"/>
+    <value-type name="QtMobility::QGeoCoordinate" target-lang-name="GeoCoordinate"/>
+    <value-type name="QtMobility::QGeoPositionInfo" target-lang-name="GeoPositionInfo"/>
+    <object-type name="QtMobility::QGeoPositionInfoSource" target-lang-name="GeoPositionInfoSource"/>
+    <value-type name="QtMobility::QGeoSatelliteInfo" target-lang-name="GeoSatelliteInfo"/>
+    <object-type name="QtMobility::QGeoSatelliteInfoSource" target-lang-name="GeoSatelliteInfoSource">
+        <modify-function signature="createDefaultSource(QObject *)">
+          <modify-argument index="return">
+            <parent index="1" action="add"/>
+          </modify-argument>
+        </modify-function>
+    </object-type>
+    <object-type name="QtMobility::QNmeaPositionInfoSource" target-lang-name="NmeaPositionInfoSource"/>
+</typesystem>

@@ -1,12 +1,19 @@
 project(SystemInfo)
 
 set(SystemInfo_SRC
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_systeminfo_python.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemdeviceinfo_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemdeviceinfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemdisplayinfo_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemdisplayinfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsysteminfo_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsysteminfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemnetworkinfo_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemnetworkinfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemscreensaver_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemscreensaver_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemstorageinfo_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemstorageinfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/systeminfo_module_wrapper.cpp
 )
 

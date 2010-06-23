@@ -16,10 +16,10 @@
 
     <namespace-type name="QtMobility" generate="no"/>
 
-    <object-type name="QtMobility::QSystemDeviceInfo" target-lang-name="QSystemDeviceInfo"/>
-    <object-type name="QtMobility::QSystemDisplayInfo" target-lang-name="QSystemDisplayInfo"/>
-    <object-type name="QtMobility::QSystemInfo" target-lang-name="QSystemInfo"/>
-    <object-type name="QtMobility::QSystemNetworkInfo" target-lang-name="QSystemNetworkInfo"/>
-    <object-type name="QtMobility::QSystemScreenSaver" target-lang-name="QSystemScreenSaver"/>
-    <object-type name="QtMobility::QSystemStorageInfo" target-lang-name="QSystemStorageInfo"/>
+    <object-type name="QtMobility::QSystemDeviceInfo" target-lang-name="SystemDeviceInfo"/>
+    <object-type name="QtMobility::QSystemDisplayInfo" target-lang-name="SystemDisplayInfo"/>
+    <object-type name="QtMobility::QSystemInfo" target-lang-name="SystemInfo"/>
+    <object-type name="QtMobility::QSystemNetworkInfo" target-lang-name="SystemNetworkInfo"/>
+    <object-type name="QtMobility::QSystemScreenSaver" target-lang-name="SystemScreenSaver"/>
+    <object-type name="QtMobility::QSystemStorageInfo" target-lang-name="SystemStorageInfo"/>
 </typesystem>
