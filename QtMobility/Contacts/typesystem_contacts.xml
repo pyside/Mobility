@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Contacts">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <namespace-type name="QtMobility" generate="no"/>
+
+    <rejection class="*" field-name="Q_DECLARE_LATIN1_CONSTANT"/>
+
+    <enum-type name="QtMobility::QContactAbstractRequest::State" />
+    <enum-type name="QtMobility::QContactAbstractRequest::RequestType" />
+    <enum-type name="QtMobility::QContactChangeLogFilter::EventType" />
+    <enum-type name="QtMobility::QContactDetail::AccessConstraint" flags="QtMobility::QContactDetail::AccessConstraints" />
+    <enum-type name="QtMobility::QContactDetailRangeFilter::RangeFlag" flags="QtMobility::QContactDetailRangeFilter::RangeFlags" />
+    <enum-type name="QtMobility::QContactFetchHint::OptimizationHint" flags="QtMobility::QContactFetchHint::OptimizationHints" />
+    <enum-type name="QtMobility::QContactFilter::FilterType" />
+    <enum-type name="QtMobility::QContactFilter::MatchFlag" flags="QtMobility::QContactFilter::MatchFlags" />
+    <enum-type name="QtMobility::QContactManager::Error" />
+    <enum-type name="QtMobility::QContactManager::ManagerFeature" />
+    <enum-type name="QtMobility::QContactPresence::PresenceState" />
+    <enum-type name="QtMobility::QContactRelationship::Role" />
+    <enum-type name="QtMobility::QContactSortOrder::BlankPolicy" />
+
+    <object-type name="QtMobility::QContactAbstractRequest">
+      <modify-function signature="setManager(QtMobility::QContactManager*)">
+        <modify-argument index="1">
+          <parent index="this" action="add"/>
+        </modify-argument>
+      </modify-function>
+    </object-type>
+    <value-type name="QtMobility::QContactDetail" />
+    <value-type name="QtMobility::QContact" />
+    <value-type name="QtMobility::QContactAddress" />
+    <value-type name="QtMobility::QContactAnniversary" />
+    <value-type name="QtMobility::QContactAvatar" />
+    <value-type name="QtMobility::QContactBirthday" />
+    <value-type name="QtMobility::QContactChangeLogFilter" />
+    <value-type name="QtMobility::QContactChangeSet" />
+    <value-type name="QtMobility::QContactDetailDefinition" />
+    <object-type name="QtMobility::QContactDetailDefinitionFetchRequest" />
+    <object-type name="QtMobility::QContactDetailDefinitionRemoveRequest" />
+    <object-type name="QtMobility::QContactDetailDefinitionSaveRequest" />
+    <value-type name="QtMobility::QContactDetailFieldDefinition" />
+    <value-type name="QtMobility::QContactDetailFilter" />
+    <value-type name="QtMobility::QContactDetailRangeFilter" />
+    <value-type name="QtMobility::QContactDisplayLabel" />
+    <value-type name="QtMobility::QContactEmailAddress" />
+    <value-type name="QtMobility::QContactFamily" />
+    <value-type name="QtMobility::QContactFetchHint" />
+    <object-type name="QtMobility::QContactFetchRequest" />
+    <value-type name="QtMobility::QContactFilter" />
+    <value-type name="QtMobility::QContactGender" />
+    <value-type name="QtMobility::QContactGeoLocation" />
+    <value-type name="QtMobility::QContactGlobalPresence" />
+    <value-type name="QtMobility::QContactGuid" />
+    <value-type name="QtMobility::QContactId" />
+    <value-type name="QtMobility::QContactIntersectionFilter" />
+    <value-type name="QtMobility::QContactInvalidFilter" />
+    <object-type name="QtMobility::QContactLocalIdFetchRequest" />
+    <value-type name="QtMobility::QContactLocalIdFilter" />
+    <object-type name="QtMobility::QContactManager" />
+    <object-type name="QtMobility::QContactManagerEngine" />
+    <object-type name="QtMobility::QContactManagerEngineFactory" />
+    <value-type name="QtMobility::QContactName" />
+    <value-type name="QtMobility::QContactNickname" />
+    <value-type name="QtMobility::QContactNote" />
+    <value-type name="QtMobility::QContactOnlineAccount" />
+    <value-type name="QtMobility::QContactOrganization" />
+    <value-type name="QtMobility::QContactPhoneNumber" />
+    <value-type name="QtMobility::QContactPresence" />
+    <value-type name="QtMobility::QContactRelationship" />
+    <object-type name="QtMobility::QContactRelationshipFetchRequest" />
+    <value-type name="QtMobility::QContactRelationshipFilter" />
+    <object-type name="QtMobility::QContactRelationshipRemoveRequest" />
+    <object-type name="QtMobility::QContactRelationshipSaveRequest" />
+    <object-type name="QtMobility::QContactRemoveRequest" />
+    <value-type name="QtMobility::QContactRingtone" />
+    <object-type name="QtMobility::QContactSaveRequest" />
+    <value-type name="QtMobility::QContactSortOrder" />
+    <value-type name="QtMobility::QContactSyncTarget" />
+    <value-type name="QtMobility::QContactTag" />
+    <value-type name="QtMobility::QContactThumbnail" />
+    <value-type name="QtMobility::QContactTimestamp" />
+    <value-type name="QtMobility::QContactType" />
+    <value-type name="QtMobility::QContactUnionFilter" />
+    <value-type name="QtMobility::QContactUrl" />
+</typesystem>

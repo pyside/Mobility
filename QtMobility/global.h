@@ -5,6 +5,7 @@
 #include "pyside_global.h"
 #include <qmobilityglobal.h>
 
+
 // SysInfo
 #include <QtSystemInfo/qsysteminfo.h>
 
@@ -21,3 +22,9 @@
 #include <QtBearer/QNetworkConfiguration>
 #include <QtBearer/QNetworkConfigurationManager>
 #include <QtBearer/QNetworkSession>
+
+// Contacts
+typedef QLatin1String QLatin1Constant;// replace type
+#define QTCONTACTSGLOBAL_H // avoid define template
+#include <QtContacts/qtcontacts.h>
+#include <QtContacts/qcontactchangeset.h>

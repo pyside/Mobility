@@ -38,6 +38,7 @@ endmacro(CREATE_PYSIDE_MODULE)
 execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_SOURCE_DIR}/__init__.py"
                                                            "${CMAKE_BINARY_DIR}/${BINDING_NAME}/__init__.py")
 
-add_subdirectory(SystemInfo)
-add_subdirectory(Location)
 add_subdirectory(Bearer)
+add_subdirectory(Contacts)
+add_subdirectory(Location)
+add_subdirectory(SystemInfo)
