@@ -11,17 +11,17 @@
 
     <namespace-type name="QtMobility" generate="no"/>
 
-    <object-type name="QtMobility::QGeoAreaMonitor" target-lang-name="GeoAreaMonitor"/>
-    <value-type name="QtMobility::QGeoCoordinate" target-lang-name="GeoCoordinate"/>
-    <value-type name="QtMobility::QGeoPositionInfo" target-lang-name="GeoPositionInfo"/>
-    <object-type name="QtMobility::QGeoPositionInfoSource" target-lang-name="GeoPositionInfoSource"/>
-    <value-type name="QtMobility::QGeoSatelliteInfo" target-lang-name="GeoSatelliteInfo"/>
-    <object-type name="QtMobility::QGeoSatelliteInfoSource" target-lang-name="GeoSatelliteInfoSource">
+    <object-type name="QtMobility::QGeoAreaMonitor" target-lang-name="QGeoAreaMonitor"/>
+    <value-type name="QtMobility::QGeoCoordinate" target-lang-name="QGeoCoordinate"/>
+    <value-type name="QtMobility::QGeoPositionInfo" target-lang-name="QGeoPositionInfo"/>
+    <object-type name="QtMobility::QGeoPositionInfoSource" target-lang-name="QGeoPositionInfoSource"/>
+    <value-type name="QtMobility::QGeoSatelliteInfo" target-lang-name="QGeoSatelliteInfo"/>
+    <object-type name="QtMobility::QGeoSatelliteInfoSource" target-lang-name="QGeoSatelliteInfoSource">
         <modify-function signature="createDefaultSource(QObject *)">
           <modify-argument index="return">
             <parent index="1" action="add"/>
           </modify-argument>
         </modify-function>
     </object-type>
-    <object-type name="QtMobility::QNmeaPositionInfoSource" target-lang-name="NmeaPositionInfoSource"/>
+    <object-type name="QtMobility::QNmeaPositionInfoSource" target-lang-name="QNmeaPositionInfoSource"/>
 </typesystem>
