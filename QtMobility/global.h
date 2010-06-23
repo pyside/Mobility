@@ -17,3 +17,7 @@
 #include <QtLocation/QGeoSatelliteInfoSource>
 #include <QtLocation/QNmeaPositionInfoSource>
 
+// Bearer
+#include <QtBearer/QNetworkConfiguration>
+#include <QtBearer/QNetworkConfigurationManager>
+#include <QtBearer/QNetworkSession>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Bearer">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <load-typesystem name="typesystem_network.xml" generate="no"/>
+
+    <enum-type name="QtMobility::QNetworkConfigurationManager::Capability" flags="QtMobility::QNetworkConfigurationManager::Capabilities"/>
+    <enum-type name="QtMobility::QNetworkConfiguration::Type"/>
+    <enum-type name="QtMobility::QNetworkConfiguration::Purpose"/>
+    <enum-type name="QtMobility::QNetworkConfiguration::StateFlag" flags="QtMobility::QNetworkConfiguration::StateFlags"/>
+    <enum-type name="QtMobility::QNetworkSession::State"/>
+    <enum-type name="QtMobility::QNetworkSession::SessionError"/>
+
+    <namespace-type name="QtMobility" generate="no"/>
+
+    <object-type name="QtMobility::QNetworkConfigurationManager" target-lang-name="QNetworkConfigurationManager"/>
+    <value-type name="QtMobility::QNetworkConfiguration" target-lang-name="QNetworkConfiguration"/>
+    <object-type name="QtMobility::QNetworkSession" target-lang-name="QNetworkSession"/>
+</typesystem>

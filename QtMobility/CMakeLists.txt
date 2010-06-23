@@ -40,3 +40,4 @@ execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_SOUR
 
 add_subdirectory(SystemInfo)
 add_subdirectory(Location)
+add_subdirectory(Bearer)
