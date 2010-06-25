@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.MultimediaKit">
+  <load-typesystem name="typesystem_gui.xml" generate="no" />
+
+  <rejection class="" function-name="qobject_cast&lt;QAudioEngineFactoryInterface*&gt;"/>
+  <rejection class="" function-name="qobject_interface_iid&lt;QAudioEngineFactoryInterface*&gt;"/>
+
+  <namespace-type name="QAudio"/>
+  <enum-type name="QAudio::Error"/>
+  <enum-type name="QAudio::Mode"/>
+  <enum-type name="QAudio::State"/>
+  <enum-type name="QAbstractVideoBuffer::HandleType"/>
+  <enum-type name="QAbstractVideoBuffer::MapMode"/>
+  <enum-type name="QAbstractVideoSurface::Error"/>
+  <enum-type name="QAudioFormat::Endian"/>
+  <enum-type name="QAudioFormat::SampleType"/>
+  <enum-type name="QVideoFrame::FieldType"/>
+  <enum-type name="QVideoFrame::PixelFormat"/>
+  <enum-type name="QVideoSurfaceFormat::Direction"/>
+  <enum-type name="QVideoSurfaceFormat::YCbCrColorSpace"/>
+  <enum-type name="QMediaImageViewer::State"/>
+  <enum-type name="QMediaImageViewer::MediaStatus"/>
+  <enum-type name="QMediaStreamsControl::StreamType"/>
+  <enum-type name="QMediaPlayer::State"/>
+  <enum-type name="QMediaPlayer::MediaStatus"/>
+  <enum-type name="QMediaPlayer::Flag" flags="QMediaPlayer::Flags"/>
+  <enum-type name="QMediaPlayer::Error"/>
+  <enum-type name="QMediaPlaylist::PlaybackMode"/>
+  <enum-type name="QMediaPlaylist::Error"/>
+  <enum-type name="QMediaRecorder::State"/>
+  <enum-type name="QMediaRecorder::Error"/>
+  <enum-type name="QMediaServiceProviderHint::Type"/>
+  <enum-type name="QMediaServiceProviderHint::Feature" flags="QMediaServiceProviderHint::Features"/>
+  <enum-type name="QRadioTuner::State"/>
+  <enum-type name="QRadioTuner::Band"/>
+  <enum-type name="QRadioTuner::Error"/>
+  <enum-type name="QRadioTuner::StereoMode"/>
+  <enum-type name="QtMultimediaKit::MetaData"/>
+  <enum-type name="QtMultimediaKit::SupportEstimate"/>
+  <enum-type name="QtMultimediaKit::EncodingQuality"/>
+  <enum-type name="QtMultimediaKit::EncodingMode"/>
+  <enum-type name="QtMultimediaKit::AvailabilityError"/>
+
+  <namespace-type name="QtMultimediaKit"/>
+
+  <value-type name="QVideoSurfaceFormat"/>
+  <object-type name="QAbstractVideoBuffer">
+      <modify-function signature="map(QAbstractVideoBuffer::MapMode, int*, int*)">
+          <modify-argument index="0">
+              <replace-type modified-type="PyObject"/>
+          </modify-argument>
+          <modify-argument index="2">
+              <remove-argument/>
+          </modify-argument>
+          <modify-argument index="3">
+              <remove-argument/>
+          </modify-argument>
+          <inject-code class="target" position="beginning">
+              <insert-template name="fix_arg,int*,int*"/>
+          </inject-code>
+      </modify-function>
+  </object-type>
+  <object-type name="QAbstractVideoSurface"/>
+  <object-type name="QVideoFrame"/>
+
+  <value-type name="QAudioFormat"/>
+  <value-type name="QAudioDeviceInfo"/>
+  <object-type name="QAbstractAudioDeviceInfo"/>
+
+  <object-type name="QAbstractAudioOutput">
+    <modify-function signature="start()">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+
+  <object-type name="QAbstractAudioInput">
+    <modify-function signature="start()">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+
+  <object-type name="QAudioInput">
+    <modify-function signature="start()">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+    <modify-function signature="start(QIODevice*)">
+      <modify-argument index="1">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+
+  <object-type name="QAudioOutput">
+    <modify-function signature="start()">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+    <modify-function signature="start(QIODevice*)">
+      <modify-argument index="1">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+
+  <object-type name="QAudioCaptureSource" />
+  <object-type name="QAudioEncoderControl" />
+  <object-type name="QAudioEndpointSelector" />
+  <object-type name="QAudioSystemFactoryInterface">
+    <modify-function signature="createInput(const QByteArray&amp;)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+    <modify-function signature="createOutput(const QByteArray&amp;)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+    <modify-function signature="createDeviceInfo(const QByteArray&amp;, QAudio::Mode)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+  <object-type name="QAudioSystemPlugin" />
+  <object-type name="QGraphicsVideoItem" />
+  <object-type name="QImageEncoderControl" />
+  <object-type name="QLocalMediaPlaylistProvider" />
+  <object-type name="QMediaBindableInterface" />
+  <object-type name="QMediaContainerControl" />
+  <value-type name="QMediaContent" />
+  <object-type name="QMediaControl" />
+  <value-type name="QAudioEncoderSettings" />
+  <value-type name="QVideoEncoderSettings" />
+  <value-type name="QImageEncoderSettings" />
+  <object-type name="QMediaImageViewer" />
+  <object-type name="QMediaObject" />
+  <object-type name="QMediaPlayerControl" />
+  <object-type name="QMediaPlayer" />
+  <object-type name="QMediaPlaylistControl" />
+  <object-type name="QMediaPlaylist" />
+  <object-type name="QMediaPlaylistReader" />
+  <object-type name="QMediaPlaylistWriter" />
+  <object-type name="QMediaPlaylistIOInterface">
+    <modify-function signature="createReader(QIODevice *, const QByteArray&amp;)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+    <modify-function signature="createReader(const QUrl&amp;, const QByteArray&amp;)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+    <modify-function signature="createWriter(QIODevice *, const QByteArray&amp;)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+  <object-type name="QMediaPlaylistIOPlugin" />
+  <object-type name="QMediaPlaylistNavigator" />
+  <object-type name="QMediaPlaylistProvider" />
+  <object-type name="QMediaPlaylistSourceControl" />
+  <object-type name="QMediaRecorderControl" />
+  <object-type name="QMediaRecorder" />
+  <value-type name="QMediaResource" />
+  <object-type name="QMediaService" />
+  <value-type name="QMediaServiceProviderHint" />
+  <object-type name="QMediaServiceProviderFactoryInterface">
+    <modify-function signature="create(const QString&amp;)">
+      <modify-argument index="return">
+        <define-ownership class="target" owner="c++"/>
+      </modify-argument>
+    </modify-function>
+  </object-type>
+  <object-type name="QMediaServiceSupportedFormatsInterface" />
+  <object-type name="QMediaServiceSupportedDevicesInterface" />
+  <object-type name="QMediaServiceFeaturesInterface" />
+  <object-type name="QMediaServiceProviderPlugin" />
+  <object-type name="QMediaStreamsControl" />
+  <value-type name="QMediaTimeInterval" />
+  <value-type name="QMediaTimeRange" />
+  <object-type name="QMetaDataReaderControl" />
+  <object-type name="QMetaDataWriterControl" />
+  <object-type name="QRadioTunerControl" />
+  <object-type name="QRadioTuner" />
+  <object-type name="QVideoDeviceControl" />
+  <object-type name="QVideoEncoderControl" />
+  <object-type name="QVideoRendererControl" />
+  <object-type name="QVideoWidgetControl" />
+  <object-type name="QVideoWidget" />
+  <object-type name="QVideoWindowControl" />
+</typesystem>

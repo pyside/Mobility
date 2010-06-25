@@ -16,7 +16,7 @@ macro(CREATE_PYSIDE_MODULE MODULE_NAME SRCS INC_DIRS LINK_LIBS)
     add_custom_command(OUTPUT ${${SRCS}}
                         COMMAND ${GENERATOR} ${GENERATOR_EXTRA_FLAGS}
                         ${CMAKE_SOURCE_DIR}/${BINDING_NAME}/global.h
-                        --include-paths=${QT_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}:${CMAKE_SOURCE_DIR}/${BINDING_NAME}
+                        --include-paths=${QT_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}
                         --typesystem-paths=${typesystem_path}:${PYSIDE_TYPESYSTEMS}
                         --output-directory=${CMAKE_CURRENT_BINARY_DIR}
                         --license-file=${CMAKE_CURRENT_SOURCE_DIR}/../licensecomment.txt
@@ -41,4 +41,5 @@ execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_SOUR
 add_subdirectory(Bearer)
 add_subdirectory(Contacts)
 add_subdirectory(Location)
+add_subdirectory(MultimediaKit)
 add_subdirectory(SystemInfo)
