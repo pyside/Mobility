@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <typesystem package="QtMobility.SystemInfo">
     <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <load-typesystem name="typesystem_network.xml" generate="no"/>
 
     <enum-type name="QtMobility::QSystemDeviceInfo::BatteryStatus"/>
     <enum-type name="QtMobility::QSystemDeviceInfo::PowerState"/>
