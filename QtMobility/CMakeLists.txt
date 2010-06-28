@@ -43,3 +43,5 @@ add_subdirectory(Contacts)
 add_subdirectory(Location)
 add_subdirectory(MultimediaKit)
 add_subdirectory(SystemInfo)
+add_subdirectory(Sensors)
+

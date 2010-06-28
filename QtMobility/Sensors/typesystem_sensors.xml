@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Sensors">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <namespace-type name="QtMobility" generate="no"/>
+
+    <rejection class="*" field-name="type" />
+
+    <primitive-type name="QtMobility::qtimestamp">
+        <include file-name="qtimestamp" location="global" />
+        <conversion-rule file="qtimestamp_conversion.h"/>
+    </primitive-type>
+
+    <enum-type name="QtMobility::QAmbientLightReading::LightLevel" />
+    <enum-type name="QtMobility::QOrientationReading::Orientation" />
+    <enum-type name="QtMobility::QTapReading::TapDirection" />
+
+    <value-type name="QtMobility::qoutputrange" />
+
+    <object-type name="QtMobility::QAccelerometer" />
+    <object-type name="QtMobility::QAccelerometerFilter" />
+    <object-type name="QtMobility::QAccelerometerReading" />
+    <object-type name="QtMobility::QAmbientLightFilter" />
+    <object-type name="QtMobility::QAmbientLightReading" />
+    <object-type name="QtMobility::QAmbientLightSensor" />
+    <object-type name="QtMobility::QCompass" />
+    <object-type name="QtMobility::QCompassFilter" />
+    <object-type name="QtMobility::QCompassReading" />
+    <object-type name="QtMobility::QMagnetometer" />
+    <object-type name="QtMobility::QMagnetometerFilter" />
+    <object-type name="QtMobility::QMagnetometerReading" />
+    <object-type name="QtMobility::QOrientationFilter" />
+    <object-type name="QtMobility::QOrientationReading" />
+    <object-type name="QtMobility::QOrientationSensor" />
+    <object-type name="QtMobility::QProximityFilter" />
+    <object-type name="QtMobility::QProximityReading" />
+    <object-type name="QtMobility::QProximitySensor" />
+    <object-type name="QtMobility::QRotationFilter" />
+    <object-type name="QtMobility::QRotationReading" />
+    <object-type name="QtMobility::QRotationSensor" />
+    <object-type name="QtMobility::QSensor" />
+    <object-type name="QtMobility::QSensorBackend" />
+    <object-type name="QtMobility::QSensorBackendFactory" />
+    <object-type name="QtMobility::QSensorFilter" />
+    <value-type name="QtMobility::QSensorManager" />
+    <object-type name="QtMobility::QSensorPluginInterface" />
+    <object-type name="QtMobility::QSensorReading" />
+    <object-type name="QtMobility::QTapFilter" />
+    <object-type name="QtMobility::QTapReading" />
+    <object-type name="QtMobility::QTapSensor" />
+
+</typesystem>
