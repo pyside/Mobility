@@ -42,6 +42,7 @@ ${QT_MOBILITY_SYSTEMINFO_LIBRARY}
 )
 
 CREATE_PYSIDE_MODULE(SystemInfo
+                     ${QT_MOBILITY_SYSTEMINFO_INCLUDE_DIR}
                      SystemInfo_SRC
                      SystemInfo_INCLUDE_DIRECTORIES
                      SystemInfo_LINK_LIBRARIES)

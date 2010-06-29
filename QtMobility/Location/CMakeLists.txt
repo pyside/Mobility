@@ -41,6 +41,7 @@ ${QT_MOBILITY_LOCATION_LIBRARY}
 )
 
 CREATE_PYSIDE_MODULE(Location
+                     ${QT_MOBILITY_LOCATION_INCLUDE_DIR}
                      Location_SRC
                      Location_INCLUDE_DIRECTORIES
                      Location_LINK_LIBRARIES)

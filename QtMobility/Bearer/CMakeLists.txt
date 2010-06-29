@@ -35,6 +35,7 @@ ${QT_MOBILITY_BEARER_LIBRARY}
 )
 
 CREATE_PYSIDE_MODULE(Bearer
+                     ${QT_MOBILITY_BEARER_INCLUDE_DIR}
                      Bearer_SRC
                      Bearer_INCLUDE_DIRECTORIES
                      Bearer_LINK_LIBRARIES)

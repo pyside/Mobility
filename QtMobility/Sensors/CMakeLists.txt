@@ -90,6 +90,7 @@ ${QT_MOBILITY_SENSORS_LIBRARY}
 )
 
 CREATE_PYSIDE_MODULE(Sensors
+                     ${QT_MOBILITY_SENSORS_INCLUDE_DIR}
                      Sensors_SRC
                      Sensors_INCLUDE_DIRECTORIES
                      Sensors_LINK_LIBRARIES)

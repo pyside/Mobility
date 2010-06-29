@@ -140,6 +140,7 @@ ${QT_MOBILITY_CONTACTS_LIBRARY}
 )
 
 CREATE_PYSIDE_MODULE(Contacts
+                     ${QT_MOBILITY_CONTACTS_INCLUDE_DIR}
                      Contacts_SRC
                      Contacts_INCLUDE_DIRECTORIES
                      Contacts_LINK_LIBRARIES)

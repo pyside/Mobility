@@ -5,7 +5,7 @@ install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/__init__.py"
 
 link_directories(${QT_MOBILITY_LIBRARY_DIR})
 
-macro(CREATE_PYSIDE_MODULE MODULE_NAME SRCS INC_DIRS LINK_LIBS)
+macro(CREATE_PYSIDE_MODULE MODULE_NAME MODULE_INCLUDE_DIR SRCS INC_DIRS LINK_LIBS)
     STRING(TOLOWER ${MODULE_NAME} LOWER_MODULE_NAME)
     STRING(TOLOWER ${BINDING_NAME} LOWER_BINDING_NAME)
     include_directories(${MODULE_NAME} ${${INC_DIRS}})
@@ -16,12 +16,12 @@ macro(CREATE_PYSIDE_MODULE MODULE_NAME SRCS INC_DIRS LINK_LIBS)
     add_custom_command(OUTPUT ${${SRCS}}
                         COMMAND ${GENERATOR} ${GENERATOR_EXTRA_FLAGS}
                         ${CMAKE_SOURCE_DIR}/${BINDING_NAME}/global.h
-                        --include-paths=${QT_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}
+                        --include-paths=${QT_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}:${MODULE_INCLUDE_DIR}
                         --typesystem-paths=${typesystem_path}:${PYSIDE_TYPESYSTEMS}
                         --output-directory=${CMAKE_CURRENT_BINARY_DIR}
                         --license-file=${CMAKE_CURRENT_SOURCE_DIR}/../licensecomment.txt
                         ${CMAKE_CURRENT_SOURCE_DIR}/typesystem_${LOWER_MODULE_NAME}.xml
-                        --api-version=${SUPPORTED_QT_VERSION}
+                        --api-version=${QT_MOBILITY_MAJOR_VERSION}.${QT_MOBILITY_MINOR_VERSION}
                         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
                         COMMENT "Running generator for ${MODULE_NAME}..."
                        )
@@ -41,7 +41,9 @@ execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_SOUR
 add_subdirectory(Bearer)
 add_subdirectory(Contacts)
 add_subdirectory(Location)
-add_subdirectory(MultimediaKit)
 add_subdirectory(SystemInfo)
 add_subdirectory(Sensors)
 
+IF(${QT_MOBILITY_VERSION} VERSION_GREATER 1.0.0)
+    add_subdirectory(MultimediaKit)
+ENDIF()
