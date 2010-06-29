@@ -97,4 +97,5 @@ set(GENERATOR_EXTRA_FLAGS --generatorSet=shiboken --enable-parent-ctor-heuristic
 enable_testing()
 
 add_subdirectory(${BINDING_NAME})
+add_subdirectory(doc)
 
