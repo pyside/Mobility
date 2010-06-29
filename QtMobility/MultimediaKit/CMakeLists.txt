@@ -156,6 +156,7 @@ ${QT_MOBILITY_MULTIMEDIAKIT_LIBRARY}
 )
 
 CREATE_PYSIDE_MODULE(MultimediaKit
+                     ${QT_MOBILITY_MULTIMEDIAKIT_INCLUDE_DIR}
                      MultimediaKit_SRC
                      MultimediaKit_INCLUDE_DIRECTORIES
                      MultimediaKit_LINK_LIBRARIES)
