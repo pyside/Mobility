@@ -10,9 +10,9 @@
     <enum-type name="QtMobility::QNetworkSession::State"/>
     <enum-type name="QtMobility::QNetworkSession::SessionError"/>
 
-    <namespace-type name="QtMobility" generate="no"/>
+    <namespace-type name="QtMobility" generate="yes"/>
 
-    <object-type name="QtMobility::QNetworkConfigurationManager" target-lang-name="QNetworkConfigurationManager"/>
-    <value-type name="QtMobility::QNetworkConfiguration" target-lang-name="QNetworkConfiguration"/>
-    <object-type name="QtMobility::QNetworkSession" target-lang-name="QNetworkSession"/>
+    <object-type name="QtMobility::QNetworkConfigurationManager"/>
+    <value-type name="QtMobility::QNetworkConfiguration"/>
+    <object-type name="QtMobility::QNetworkSession"/>
 </typesystem>

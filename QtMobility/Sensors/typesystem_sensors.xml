@@ -48,4 +48,7 @@
     <object-type name="QtMobility::QTapReading" />
     <object-type name="QtMobility::QTapSensor" />
 
+
+  <suppress-warning text="Shadowing: QSensor::reading() const and *::reading() const" />
+  <suppress-warning text="Final class 'QSensorReading' set to non-final, as it is extended by other classes" />
 </typesystem>

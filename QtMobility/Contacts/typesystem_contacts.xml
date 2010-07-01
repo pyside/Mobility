@@ -80,4 +80,8 @@
     <value-type name="QtMobility::QContactType" />
     <value-type name="QtMobility::QContactUnionFilter" />
     <value-type name="QtMobility::QContactUrl" />
+
+
+    <suppress-warning text="Shadowing: QContactDetail::operator=(const QtMobility::QContactDetail &amp; other) and *"/>
+    <suppress-warning text="Final class 'QContactAbstractRequest' set to non-final, as it is extended by other classes"/>
 </typesystem>
