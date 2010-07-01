@@ -3,8 +3,6 @@
     <load-typesystem name="typesystem_core.xml" generate="no"/>
     <namespace-type name="QtMobility" generate="no"/>
 
-    <rejection class="*" field-name="Q_DECLARE_LATIN1_CONSTANT"/>
-
     <enum-type name="QtMobility::QContactAbstractRequest::State" />
     <enum-type name="QtMobility::QContactAbstractRequest::RequestType" />
     <enum-type name="QtMobility::QContactChangeLogFilter::EventType" />

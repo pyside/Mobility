@@ -24,8 +24,9 @@
 #include <QNetworkSession>
 
 // Contacts
-typedef QLatin1String QLatin1Constant;// replace type
+// typedef QLatin1String QLatin1Constant;// replace type
 #define QTCONTACTSGLOBAL_H // avoid define template
+#define Q_DECLARE_LATIN1_CONSTANT(varname, str) static const QString varname
 #include <qtcontacts.h>
 #include <qcontactchangeset.h>
 
