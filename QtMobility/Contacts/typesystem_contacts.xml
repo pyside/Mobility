@@ -26,8 +26,8 @@
         </modify-argument>
       </modify-function>
     </object-type>
-    <value-type name="QtMobility::QContactDetail" />
-    <value-type name="QtMobility::QContact" />
+    <value-type name="QtMobility::QContactDetail" hash-function="qHash" />
+    <value-type name="QtMobility::QContact" hash-function="qHash" />
     <value-type name="QtMobility::QContactAddress" />
     <value-type name="QtMobility::QContactAnniversary" />
     <value-type name="QtMobility::QContactAvatar" />
@@ -51,7 +51,7 @@
     <value-type name="QtMobility::QContactGeoLocation" />
     <value-type name="QtMobility::QContactGlobalPresence" />
     <value-type name="QtMobility::QContactGuid" />
-    <value-type name="QtMobility::QContactId" />
+    <value-type name="QtMobility::QContactId" hash-function="qHash" />
     <value-type name="QtMobility::QContactIntersectionFilter" />
     <value-type name="QtMobility::QContactInvalidFilter" />
     <object-type name="QtMobility::QContactLocalIdFetchRequest" />
@@ -66,7 +66,7 @@
     <value-type name="QtMobility::QContactOrganization" />
     <value-type name="QtMobility::QContactPhoneNumber" />
     <value-type name="QtMobility::QContactPresence" />
-    <value-type name="QtMobility::QContactRelationship" />
+    <value-type name="QtMobility::QContactRelationship" hash-function="qHash" />
     <object-type name="QtMobility::QContactRelationshipFetchRequest" />
     <value-type name="QtMobility::QContactRelationshipFilter" />
     <object-type name="QtMobility::QContactRelationshipRemoveRequest" />
