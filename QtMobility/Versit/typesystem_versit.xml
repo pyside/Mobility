@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Versit">
+    <load-typesystem name="typesystem_contacts.xml" generate="no"/>
+
+    <enum-type name="QtMobility::QVersitContactExporter::Error"/>
+    <enum-type name="QtMobility::QVersitContactImporter::Error"/>
+    <enum-type name="QtMobility::QVersitDocument::VersitType"/>
+    <enum-type name="QtMobility::QVersitProperty::ValueType"/>
+    <enum-type name="QtMobility::QVersitReader::Error"/>
+    <enum-type name="QtMobility::QVersitReader::State"/>
+    <enum-type name="QtMobility::QVersitWriter::Error"/>
+    <enum-type name="QtMobility::QVersitWriter::State"/>
+
+    <object-type name="QtMobility::QVersitContactExporterDetailHandler"/>
+    <value-type name="QtMobility::QVersitContactExporter"/>
+    <object-type name="QtMobility::QVersitContactImporterPropertyHandler"/>
+    <value-type name="QtMobility::QVersitContactImporter"/>
+    <value-type name="QtMobility::QVersitDocument" hash-function="qHash"/>
+    <value-type name="QtMobility::QVersitProperty" hash-function="qHash"/>
+    <object-type name="QtMobility::QVersitReader"/>
+    <object-type name="QtMobility::QVersitResourceHandler"/>
+    <value-type name="QtMobility::QVersitDefaultResourceHandler"/>
+    <object-type name="QtMobility::QVersitWriter"/>
+</typesystem>

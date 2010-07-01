@@ -121,3 +121,15 @@
 #include <QTapReading>
 #include <QTapFilter>
 #include <QTapSensor>
+
+//Versit
+#include <QVersitContactExporter>
+#include <QVersitContactExporterDetailHandler>
+#include <QVersitContactImporter>
+#include <QVersitContactImporterPropertyHandler>
+#include <QVersitDefaultResourceHandler>
+#include <QVersitDocument>
+#include <QVersitProperty>
+#include <QVersitReader>
+#include <QVersitResourceHandler>
+#include <QVersitWriter>
