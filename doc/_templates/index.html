@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% set title = 'Overview' %}
+{% block body %}
+<div class="section">
+  <h1>PySide Mobility {{ version }}</h1>
+
+    <p>PySide Mobility is built using the <a href="http://www.pyside.org/docs/shiboken">Shiboken</a> binding generator.</p>
+
+  <h2>Documentation</h2>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("contents") }}">Contents</a><br/>
+         <span class="linkdescr">for a complete overview</span></p>
+    </td></tr>
+  </table>
+
+  <h2>Modules</h2>
+  <table class="contentstable" align="center" style="margin-left: 30px"><tr>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("QtMobility/Contacts/index") }}">Contacts</a><br/>
+         <span class="linkdescr">The structure and retrieval of contact data from local or remote backends. It includes the ability to create, edit, list, delete and lookup contact information whether it is stored locally or remotely.</span></p>
+
+      <p class="biglink"><a class="biglink" href="{{ pathto("QtMobility/Location/index") }}">Location</a><br/>
+         <span class="linkdescr">
+         The C++ API is one layer of this feature. This API provides an easy to use interface that encapsulates basic geographical information obtained from satellite or other sources about the user, including latitude and longitude, bearing, speed and altitude. It will enable a range of geographical applications, for example, maps.
+         </span></p>
+
+      <p class="biglink"><a class="biglink" href="{{ pathto("QtMobility/MutimediaKit/index") }}">MultimediaKit</a><br/>
+         <span class="linkdescr">
+         An API to play audio and video of various formats. Record audio. The playing and managing of an FM radio. This includes the typical functionality you would find on a music and video player, combined with an FM radio.
+         Note: The Multimedia API, together with QtMultimedia, is intended to eventually replace the Phonon API.
+         </span></p>
+
+      <p class="biglink"><a class="biglink" href="{{ pathto("QtMobility/Sensors/index") }}">Sensors</a><br/>
+         <span class="linkdescr">An API for accessing hardware sensors. This covers both high-level sensors such as screen orientation (portrait, landscape) and low-level, real-time sensors such as accelerometer data.</span></p>
+
+
+      <p class="biglink"><a class="biglink" href="{{ pathto("QtMobility/SystemInfo/index") }}">System Information</a><br/>
+         <span class="linkdescr">
+            An API to discover system related information and capabilities. Information available will cover software version numbers, hardware features, network connection types and status, display, data storage devices, device information and the screensaver.
+         </span></p>
+    </td>
+  </table>
+</div>
+{% endblock %}
