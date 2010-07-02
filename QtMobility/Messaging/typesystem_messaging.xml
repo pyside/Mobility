@@ -3,7 +3,9 @@
     <load-typesystem name="typesystem_core.xml" generate="no"/>
     <namespace-type name="QtMobility" generate="no"/>
 
-    <value-type name="QtMobility::QMessage" />
+    <value-type name="QtMobility::QMessage">
+        <modify-function signature="from" rename="from_" />
+    </value-type>
     <enum-type name="QtMobility::QMessage::Type" flags="QtMobility::QMessage::TypeFlags" />
     <enum-type name="QtMobility::QMessage::Status" flags="QtMobility::QMessage::StatusFlags" />
     <enum-type name="QtMobility::QMessage::Priority" />
