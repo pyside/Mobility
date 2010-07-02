@@ -133,3 +133,24 @@
 #include <QVersitReader>
 #include <QVersitResourceHandler>
 #include <QVersitWriter>
+
+// Messaging
+#include <QMessage>
+#include <QMessageAccount>
+#include <QMessageAccountFilter>
+#include <QMessageAccountId>
+#include <QMessageAccountSortOrder>
+#include <QMessageAddress>
+#include <QMessageContentContainer>
+#include <QMessageContentContainerId>
+#include <QMessageFilter>
+#include <QMessageFolder>
+#include <QMessageFolderFilter>
+#include <QMessageFolderId>
+#include <QMessageFolderSortOrder>
+#include <QMessageId>
+#include <QMessageManager>
+#include <QMessageService>
+#include <QMessageSortOrder>
+#include <QMessageStore>
+

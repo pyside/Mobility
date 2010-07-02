@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Messaging">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <namespace-type name="QtMobility" generate="no"/>
+
+    <value-type name="QtMobility::QMessage" />
+    <enum-type name="QtMobility::QMessage::Type" flags="QtMobility::QMessage::TypeFlags" />
+    <enum-type name="QtMobility::QMessage::Status" flags="QtMobility::QMessage::StatusFlags" />
+    <enum-type name="QtMobility::QMessage::Priority" />
+    <enum-type name="QtMobility::QMessage::StandardFolder" />
+    <enum-type name="QtMobility::QMessage::ResponseType" />
+    <value-type name="QtMobility::QMessageAccount" />
+    <value-type name="QtMobility::QMessageAccountFilter" />
+    <value-type name="QtMobility::QMessageAccountId" hash-function="qHash" />
+    <value-type name="QtMobility::QMessageAccountSortOrder" />
+    <value-type name="QtMobility::QMessageAddress" />
+    <enum-type name="QtMobility::QMessageAddress::Type" />
+    <value-type name="QtMobility::QMessageContentContainer" />
+    <value-type name="QtMobility::QMessageContentContainerId" />
+    <namespace-type name="QtMobility::QMessageDataComparator" />
+    <enum-type name="QtMobility::QMessageDataComparator::EqualityComparator" />
+    <enum-type name="QtMobility::QMessageDataComparator::InclusionComparator" />
+    <enum-type name="QtMobility::QMessageDataComparator::RelationComparator" />
+    <enum-type name="QtMobility::QMessageDataComparator::MatchFlag" flags="QtMobility::QMessageDataComparator::MatchFlags" />
+    <value-type name="QtMobility::QMessageFilter" />
+    <value-type name="QtMobility::QMessageFolder" />
+    <value-type name="QtMobility::QMessageFolderFilter" />
+    <value-type name="QtMobility::QMessageFolderId" hash-function="qHash" />
+    <value-type name="QtMobility::QMessageFolderSortOrder" />
+    <value-type name="QtMobility::QMessageId" hash-function="qHash" />
+    <object-type name="QtMobility::QMessageManager" />
+    <enum-type name="QtMobility::QMessageManager::RemovalOption" />
+    <enum-type name="QtMobility::QMessageManager::Error" />
+    <primitive-type name="QtMobility::QMessageManager::NotificationFilterId"  target-lang-api-name="PyInt" />
+    <object-type name="QtMobility::QMessageService" />
+    <value-type name="QtMobility::QMessageSortOrder" />
+</typesystem>

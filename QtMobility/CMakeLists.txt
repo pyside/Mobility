@@ -44,6 +44,7 @@ add_subdirectory(Location)
 add_subdirectory(SystemInfo)
 add_subdirectory(Sensors)
 add_subdirectory(Versit)
+add_subdirectory(Messaging)
 
 IF(${QT_MOBILITY_VERSION} VERSION_GREATER 1.0.0)
     add_subdirectory(MultimediaKit)
