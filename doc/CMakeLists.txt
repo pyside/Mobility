@@ -54,7 +54,9 @@ if(NOT DOC_DISABLED)
     create_doc(Location ${Location_SOURCE_DIR} ${QT_MOBILITY_LOCATION_INCLUDE_DIR})
     create_doc(MultimediaKit ${MultimediaKit_SOURCE_DIR} ${QT_MOBILITY_MULTIMEDIAKIT_INCLUDE_DIR})
     create_doc(Sensors ${Sensors_SOURCE_DIR} ${QT_MOBILITY_SENSORS_INCLUDE_DIR})
+    create_doc(ServiceFramework ${ServiceFramework_SOURCE_DIR} ${QT_MOBILITY_SERVICEFRAMEWORK_INCLUDE_DIR})
     create_doc(SystemInfo ${SystemInfo_SOURCE_DIR} ${QT_MOBILITY_SYSTEMINFO_INCLUDE_DIR})
+    create_doc(Versit ${Versit_SOURCE_DIR} ${QT_MOBILITY_VERSIT_INCLUDE_DIR})
 
     #install files
     add_custom_target(apidocinstall
