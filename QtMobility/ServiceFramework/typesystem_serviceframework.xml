@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.ServiceFramework">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <namespace-type name="QtMobility" generate="no"/>
+    <namespace-type name="QtMobility::QService"/>
+
+    <enum-type name="QtMobility::QServiceContext::ContextType"/>
+    <enum-type name="QtMobility::QServiceFilter::VersionMatchRule"/>
+    <enum-type name="QtMobility::QServiceFilter::CapabilityMatchRule"/>
+    <enum-type name="QtMobility::QService::Scope"/>
+    <enum-type name="QtMobility::QServiceInterfaceDescriptor::Attribute"/>
+    <enum-type name="QtMobility::QServiceManager::Error"/>
+
+    <object-type name="QtMobility::QAbstractSecuritySession"/>
+    <object-type name="QtMobility::QServiceContext"/>
+    <value-type name="QtMobility::QServiceFilter"/>
+    <value-type name="QtMobility::QServiceInterfaceDescriptor"/>
+    <object-type name="QtMobility::QServiceManager"/>
+    <object-type name="QtMobility::QServicePluginInterface"/>
+</typesystem>

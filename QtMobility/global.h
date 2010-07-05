@@ -1,7 +1,5 @@
 // Sensors
 // QtMobility global header
-
-
 #include "pyside_global.h"
 #include <qmobilityglobal.h>
 
@@ -154,3 +152,12 @@
 #include <QMessageSortOrder>
 #include <QMessageStore>
 
+// ServiceFramework
+#include <QAbstractSecuritySession>
+#include <QServiceContext>
+#include <QServiceFilter>
+#include <QServiceInterfaceDescriptor>
+#include <QServiceManager>
+#include <QServicePluginInterface>
+#include <qremoteserviceclassregister.h> // where is the include without .h like the others?
+#include <qremoteservicecontrol.h>       // where is the include without .h like the others?
