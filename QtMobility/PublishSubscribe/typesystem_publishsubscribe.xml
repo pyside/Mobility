@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.PublishSubscribe">
+    <load-typesystem name="typesystem_core.xml" generate="no" />
+
+    <namespace-type name="QtMobility" generate="no" />
+
+    <namespace-type name="QtMobility::QValueSpace" />
+
+    <enum-type name="QtMobility::QValueSpace::LayerOption" flags="QtMobility::QValueSpace::LayerOptions" />
+
+    <object-type name="QtMobility::QValueSpacePublisher" />
+    <object-type name="QtMobility::QValueSpaceSubscriber" />
+
+</typesystem>
+

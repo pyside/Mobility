@@ -161,3 +161,8 @@
 #include <QServicePluginInterface>
 #include <qremoteserviceclassregister.h> // where is the include without .h like the others?
 #include <qremoteservicecontrol.h>       // where is the include without .h like the others?
+
+// PublishSubscribe
+#include <QValueSpacePublisher>
+#include <QValueSpaceSubscriber>
+
