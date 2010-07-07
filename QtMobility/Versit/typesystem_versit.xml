@@ -17,8 +17,12 @@
     <value-type name="QtMobility::QVersitContactImporter"/>
     <value-type name="QtMobility::QVersitDocument" hash-function="qHash"/>
     <value-type name="QtMobility::QVersitProperty" hash-function="qHash"/>
-    <object-type name="QtMobility::QVersitReader"/>
+    <object-type name="QtMobility::QVersitReader">
+        <modify-function signature="waitForFinished(int)" allow-thread="yes"/>
+    </object-type>
     <object-type name="QtMobility::QVersitResourceHandler"/>
     <value-type name="QtMobility::QVersitDefaultResourceHandler"/>
-    <object-type name="QtMobility::QVersitWriter"/>
+    <object-type name="QtMobility::QVersitWriter">
+        <modify-function signature="waitForFinished(int)" allow-thread="yes"/>
+    </object-type>
 </typesystem>
