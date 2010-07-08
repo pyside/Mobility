@@ -36,7 +36,7 @@ if(NOT DOC_DISABLED)
                             ${mobility_SOURCE_DIR}/${module}/typesystem_${module_name}.xml
                             --generatorSet=qtdoc
                             --include-paths=${QT_INCLUDE_DIR}:${include_dir}:${QT_MOBILITY_INCLUDE_DIR}
-                            --typesystem-paths=${PYSIDE_TYPESYSTEMS}
+                            --typesystem-paths=${PYSIDE_TYPESYSTEMS}:${mobility_SOURCE_DIR}:${${module}_BINARY_DIR}:${typesystem_path}
                             --library-source-dir=${QT_MOBILITY_SRC_DIR}
                             --documentation-only
                             --documentation-data-dir=${DOC_DATA_DIR}
@@ -49,14 +49,16 @@ if(NOT DOC_DISABLED)
         add_dependencies(apidoc "${module}-apidoc")
     endmacro(create_doc module)
 
-    create_doc(Bearer ${Bearer_SOURCE_DIR} ${QT_MOBILITY_BEARER_INCLUDE_DIR})
-    create_doc(Contacts ${Contacts_SOURCE_DIR} ${QT_MOBILITY_CONTACTS_INCLUDE_DIR})
-    create_doc(Location ${Location_SOURCE_DIR} ${QT_MOBILITY_LOCATION_INCLUDE_DIR})
-    create_doc(MultimediaKit ${MultimediaKit_SOURCE_DIR} ${QT_MOBILITY_MULTIMEDIAKIT_INCLUDE_DIR})
-    create_doc(Sensors ${Sensors_SOURCE_DIR} ${QT_MOBILITY_SENSORS_INCLUDE_DIR})
-    create_doc(ServiceFramework ${ServiceFramework_SOURCE_DIR} ${QT_MOBILITY_SERVICEFRAMEWORK_INCLUDE_DIR})
-    create_doc(SystemInfo ${SystemInfo_SOURCE_DIR} ${QT_MOBILITY_SYSTEMINFO_INCLUDE_DIR})
-    create_doc(Versit ${Versit_SOURCE_DIR} ${QT_MOBILITY_VERSIT_INCLUDE_DIR})
+    create_doc(Bearer "${Bearer_SOURCE_DIR}" "${QT_MOBILITY_BEARER_INCLUDE_DIR}")
+    create_doc(Contacts "${Contacts_SOURCE_DIR}" "${QT_MOBILITY_CONTACTS_INCLUDE_DIR}")
+    create_doc(Location "${Location_SOURCE_DIR}" "${QT_MOBILITY_LOCATION_INCLUDE_DIR}")
+    create_doc(MultimediaKit "${MultimediaKit_SOURCE_DIR}" "${QT_MOBILITY_MULTIMEDIAKIT_INCLUDE_DIR}")
+    create_doc(Sensors "${Sensors_SOURCE_DIR}" "${QT_MOBILITY_SENSORS_INCLUDE_DIR}")
+    create_doc(ServiceFramework "${ServiceFramework_SOURCE_DIR}" "${QT_MOBILITY_SERVICEFRAMEWORK_INCLUDE_DIR}")
+    create_doc(SystemInfo "${SystemInfo_SOURCE_DIR}" "${QT_MOBILITY_SYSTEMINFO_INCLUDE_DIR}")
+    create_doc(Versit "${Contacts_SOURCE_DIR}:${Contacts_BINARY_DIR}:${Versit_SOURCE_DIR}" "${QT_MOBILITY_VERSIT_INCLUDE_DIR}")
+    create_doc(Messaging "${Messaging_SOURCE_DIR}" "${QT_MOBILITY_MESSAGING_INCLUDE_DIR}")
+    create_doc(PublishSubscribe "${PublishSubscribe_SOURCE_DIR}" "${QT_MOBILITY_PUBLISHSUBSCRIBE_INCLUDE_DIR}")
 
     #install files
     add_custom_target(apidocinstall
