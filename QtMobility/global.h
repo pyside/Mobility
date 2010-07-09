@@ -17,9 +17,11 @@
 #include <QNmeaPositionInfoSource>
 
 // Bearer
+#if(QT_VERSION < QT_VERSION_CHECK(4, 7, 0))
 #include <QNetworkConfiguration>
 #include <QNetworkConfigurationManager>
 #include <QNetworkSession>
+#endif
 
 // Contacts
 // typedef QLatin1String QLatin1Constant;// replace type

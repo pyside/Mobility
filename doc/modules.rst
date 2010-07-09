@@ -1,5 +1,5 @@
-PySide modules
-**************
+QtMobility modules
+******************
 
 .. toctree::
 
