@@ -4,7 +4,7 @@
     <namespace-type name="QtMobility" generate="no"/>
 
     <value-type name="QtMobility::QMessage">
-        <modify-function signature="from" rename="from_" />
+        <modify-function signature="from()const" rename="from_" />
     </value-type>
     <enum-type name="QtMobility::QMessage::Type" flags="QtMobility::QMessage::TypeFlags" />
     <enum-type name="QtMobility::QMessage::Status" flags="QtMobility::QMessage::StatusFlags" />
@@ -34,6 +34,8 @@
     <enum-type name="QtMobility::QMessageManager::RemovalOption" />
     <enum-type name="QtMobility::QMessageManager::Error" />
     <primitive-type name="QtMobility::QMessageManager::NotificationFilterId"  target-lang-api-name="PyInt" />
+    <enum-type name="QtMobility::QMessageService::State" />
     <object-type name="QtMobility::QMessageService" />
     <value-type name="QtMobility::QMessageSortOrder" />
 </typesystem>
+
