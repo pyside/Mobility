@@ -1,0 +1,1 @@
+QTMOBILITY_TEST(publishsubscribe_test.py)

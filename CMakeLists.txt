@@ -36,7 +36,7 @@ endif()
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules/
                       ${CMAKE_MODULE_PATH})
 find_package(PythonLibs REQUIRED)
-find_package(PythonInterp REQUIRED)
+find_package(PythonInterpWithDebug REQUIRED)
 find_package(Shiboken REQUIRED)
 find_package(PySide 0.3.3 EXACT REQUIRED)
 find_package(Qt4 4.6.2 REQUIRED)
@@ -92,10 +92,21 @@ if (NOT SITE_PACKAGE)
     message(FATAL_ERROR "Could not detect Python module installation directory.")
 endif()
 
+# Detect if the python libs were compiled in debug mode
+execute_process(
+    COMMAND ${PYTHON_EXECUTABLE} -c "from distutils import sysconfig; \\
+        print sysconfig.get_config_var('Py_DEBUG')"
+    OUTPUT_VARIABLE PY_DEBUG
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+if (PY_DEBUG)
+    add_definitions("-DPy_DEBUG")
+endif()
+
 set(GENERATOR_EXTRA_FLAGS --generatorSet=shiboken --enable-parent-ctor-heuristic --enable-pyside-extensions --enable-return-value-heuristic)
 
 enable_testing()
 
 add_subdirectory(${BINDING_NAME})
 add_subdirectory(doc)
+add_subdirectory(tests)
 
