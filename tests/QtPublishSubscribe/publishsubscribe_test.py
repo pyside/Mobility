@@ -34,11 +34,16 @@ class Subscriber(QObject):
         self.publisherValue = self.subscriber.value(subPaths[0])
 
 
+value_space_server_initialised = False
+
 class PublishSubscriberTest(UsesQCoreApplication):
 
     def setUp(self):
         #Acquire resources
-        QValueSpace.initValueSpaceServer()
+        global value_space_server_initialised
+        if not value_space_server_initialised:
+            QValueSpace.initValueSpaceServer()
+            value_space_server_initialised = True
         self.timer = QTimer()
         UsesQCoreApplication.setUp(self)
 
