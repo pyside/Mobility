@@ -18,20 +18,24 @@ class Publisher(object):
 
 
 class Subscriber(QObject):
-    def __init__(self, connection_mode=0):
+    def __init__(self, connection_mode, app):
         QObject.__init__(self)
+
         self.publisherValue = None
+        self.app = app
         self.subscriber = QValueSpaceSubscriber('/foobar', self)
+
         if connection_mode == 0:
             QObject.connect(self.subscriber, SIGNAL('contentsChanged()'), self, SLOT('subscriberChanged()'))
         elif connection_mode == 1:
-            QObject.connect(self.subscriber, SIGNAL('contentsChanged()'), self.subscriberChanged())
+            QObject.connect(self.subscriber, SIGNAL('contentsChanged()'), self.subscriberChanged)
         elif connection_mode == 2:
             self.subscriber.contentsChanged.connect(self.subscriberChanged)
 
     def subscriberChanged(self):
         subPaths = self.subscriber.subPaths()
         self.publisherValue = self.subscriber.value(subPaths[0])
+        self.app.exit(0)
 
 
 value_space_server_initialised = False
@@ -44,52 +48,31 @@ class PublishSubscriberTest(UsesQCoreApplication):
         if not value_space_server_initialised:
             QValueSpace.initValueSpaceServer()
             value_space_server_initialised = True
-        self.timer = QTimer()
         UsesQCoreApplication.setUp(self)
-
-    def tearDown(self):
-        #Release resources
-        del self.timer
-        UsesQCoreApplication.tearDown(self)
 
     def testPublishSubscribeWithOldStyleConnection(self):
         publisher = Publisher()
-        subscriber = Subscriber()
-
-        def modifyPublisherValue():
-            publisher.updateValue(1234)
-            self.app.exit(0)
-
-        QObject.connect(self.timer, SIGNAL('timeout()'), modifyPublisherValue)
-        self.timer.start(4)
-
+        subscriber = Subscriber(0, self.app)
+        value = 123
+        publisher.updateValue(value)
         self.app.exec_()
+        self.assertEqual(subscriber.publisherValue, value)
 
     def testPublishSubscribeWithOldStyleConnectionAndCallback(self):
         publisher = Publisher()
-        subscriber = Subscriber(1)
-
-        def modifyPublisherValue():
-            publisher.updateValue(1234)
-            self.app.exit(0)
-
-        QObject.connect(self.timer, SIGNAL('timeout()'), modifyPublisherValue)
-        self.timer.start(4)
-
+        subscriber = Subscriber(1, self.app)
+        value = 456
+        publisher.updateValue(value)
         self.app.exec_()
+        self.assertEqual(subscriber.publisherValue, value)
 
     def testPublishSubscribeWithNewStyleConnection(self):
         publisher = Publisher()
-        subscriber = Subscriber(2)
-
-        def modifyPublisherValue():
-            publisher.updateValue(1234)
-            self.app.exit(0)
-
-        QObject.connect(self.timer, SIGNAL('timeout()'), modifyPublisherValue)
-        self.timer.start(4)
-
+        subscriber = Subscriber(2, self.app)
+        value = 789
+        publisher.updateValue(value)
         self.app.exec_()
+        self.assertEqual(subscriber.publisherValue, value)
 
 if __name__ == '__main__':
     unittest.main()
