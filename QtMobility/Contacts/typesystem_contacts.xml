@@ -19,6 +19,7 @@
     <enum-type name="QtMobility::QContactManager::ManagerFeature" />
     <enum-type name="QtMobility::QContactPresence::PresenceState" />
     <enum-type name="QtMobility::QContactRelationship::Role" />
+    <enum-type name="QtMobility::QContactRelationshipFilter::Role" />
     <enum-type name="QtMobility::QContactSortOrder::BlankPolicy" />
 
     <object-type name="QtMobility::QContactAbstractRequest">
