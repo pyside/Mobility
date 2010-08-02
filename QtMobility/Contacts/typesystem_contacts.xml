@@ -83,7 +83,9 @@
         </inject-code>
       </modify-function>
     </object-type>
-    <object-type name="QtMobility::QContactManagerEngine" />
+    <object-type name="QtMobility::QContactManagerEngine">
+      <modify-function signature="setContactDisplayLabel(const QString&amp;, const QtMobility::QContact&amp;)" remove="all"/>
+    </object-type>
     <object-type name="QtMobility::QContactManagerEngineFactory" />
     <value-type name="QtMobility::QContactName" />
     <value-type name="QtMobility::QContactNickname" />
