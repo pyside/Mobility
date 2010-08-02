@@ -4,6 +4,9 @@
     <load-typesystem name="typesystem_gui.xml" generate="no"/>
     <namespace-type name="QtMobility" generate="no"/>
 
+
+    <primitive-type name="QtMobility::QContactLocalId"/>
+
     <enum-type name="QtMobility::QContactAbstractRequest::State" />
     <enum-type name="QtMobility::QContactAbstractRequest::RequestType" />
     <enum-type name="QtMobility::QContactChangeLogFilter::EventType" />
