@@ -3,6 +3,7 @@ project(Bearer)
 set(Bearer_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Bearer/bearer_module_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Bearer/qtmobility_bearer_python.h
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Bearer/qtmobility_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Bearer/qtmobility_qnetworkconfigurationmanager_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Bearer/qtmobility_qnetworkconfigurationmanager_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Bearer/qtmobility_qnetworkconfiguration_wrapper.cpp
