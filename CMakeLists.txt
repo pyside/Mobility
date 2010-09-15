@@ -3,6 +3,16 @@ include(icecc.cmake) # this must be the first line!
 project(pysidemobility)
 
 cmake_minimum_required(VERSION 2.6)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules/
+                      ${CMAKE_MODULE_PATH})
+find_package(PythonLibs REQUIRED)
+find_package(PythonInterpWithDebug REQUIRED)
+find_package(Shiboken REQUIRED)
+find_package(PySide 0.4.0 REQUIRED)
+find_package(Qt4 4.6.2 REQUIRED)
+SET(SUPPORTED_QT_VERSION "4.6.0")
+find_package(QtMobility 1.0.0 REQUIRED )
+
 
 if(CMAKE_HOST_UNIX)
     option(ENABLE_GCC_OPTIMIZATION "Enable specific GCC flags to optimization library size and performance. Only available on Release Mode" 0)
@@ -33,16 +43,6 @@ if(AVOID_PROTECTED_HACK OR WIN32)
     message(STATUS "Avoiding protected hack!")
 endif()
 
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules/
-                      ${CMAKE_MODULE_PATH})
-find_package(PythonLibs REQUIRED)
-find_package(PythonInterpWithDebug REQUIRED)
-find_package(Shiboken REQUIRED)
-find_package(PySide 0.4.0 REQUIRED)
-find_package(Qt4 4.6.2 REQUIRED)
-SET(SUPPORTED_QT_VERSION "4.6.0")
-find_package(QtMobility 1.0.0 REQUIRED )
-
 set(BINDING_NAME QtMobility)
 set(BINDING_API_MAJOR_VERSION "0")
 set(BINDING_API_MINOR_VERSION "1")
@@ -51,10 +51,6 @@ set(BINDING_API_VERSION "${BINDING_API_MAJOR_VERSION}.${BINDING_API_MINOR_VERSIO
 
 set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)" )
 set(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}" CACHE PATH "The subdirectory relative to the install prefix where libraries will be installed (default is /lib${LIB_SUFFIX})" FORCE)
-
-if (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
 
 include(${QT_USE_FILE})
 
@@ -98,8 +94,19 @@ execute_process(
         print sysconfig.get_config_var('Py_DEBUG')"
     OUTPUT_VARIABLE PY_DEBUG
     OUTPUT_STRIP_TRAILING_WHITESPACE)
-if (PY_DEBUG)
-    add_definitions("-DPy_DEBUG")
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    if(NOT PYTHON_DEBUG_LIBRARIES)
+        message(FATAL_ERROR "Python debug library not found. Try compile PySide with -DCMAKE_BUILD_TYPE=Release")
+    endif()
+    if(NOT PY_DEBUG)
+        message(WARNING "Compiling PySide with debug enabled, but the python executable was not compiled with debug support.")
+    else()
+        add_definitions("-DPy_DEBUG")
+    endif()
+    set(PYSIDE_PYTHON_LIBRARIES ${PYTHON_DEBUG_LIBRARIES})
+else()
+    set(PYSIDE_PYTHON_LIBRARIES ${PYTHON_LIBRARIES})
 endif()
 
 set(GENERATOR_EXTRA_FLAGS --generatorSet=shiboken --enable-parent-ctor-heuristic --enable-pyside-extensions --enable-return-value-heuristic)
