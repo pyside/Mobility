@@ -1,7 +1,7 @@
 // Sensors
 // QtMobility global header
 #include "pyside_global.h"
-#include <qmobilityglobal.h>
+#include <QtMobility/qmobilityglobal.h>
 
 
 // SysInfo
