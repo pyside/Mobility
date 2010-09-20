@@ -16,7 +16,7 @@ macro(CREATE_PYSIDE_MODULE MODULE_NAME MODULE_INCLUDE_DIR SRCS INC_DIRS LINK_LIB
     add_custom_command(OUTPUT ${${SRCS}}
                         COMMAND ${GENERATOR} ${GENERATOR_EXTRA_FLAGS}
                         ${CMAKE_SOURCE_DIR}/${BINDING_NAME}/global.h
-                        --include-paths=${QT_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}:${MODULE_INCLUDE_DIR}
+                        --include-paths=${QT_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}:${QT_MOBILITY_PARENT_INCLUDE_DIR}:${MODULE_INCLUDE_DIR}
                         --typesystem-paths=${typesystem_path}:${PYSIDE_TYPESYSTEMS}
                         --output-directory=${CMAKE_CURRENT_BINARY_DIR}
                         --license-file=${CMAKE_CURRENT_SOURCE_DIR}/../licensecomment.txt
