@@ -8,6 +8,8 @@
     <enum-type name="QtMobility::QServiceFilter::VersionMatchRule"/>
     <enum-type name="QtMobility::QServiceFilter::CapabilityMatchRule"/>
     <enum-type name="QtMobility::QService::Scope"/>
+    <enum-type name="QtMobility::QService::Type"/>
+    <enum-type name="QtMobility::QService::UnrecoverableIPCError"/>
     <enum-type name="QtMobility::QServiceInterfaceDescriptor::Attribute"/>
     <enum-type name="QtMobility::QServiceManager::Error"/>
 

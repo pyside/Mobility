@@ -8,7 +8,8 @@
     <enum-type name="QtMobility::QSystemDeviceInfo::InputMethod" flags="QtMobility::QSystemDeviceInfo::InputMethodFlags"/>
     <enum-type name="QtMobility::QSystemDeviceInfo::Profile"/>
     <enum-type name="QtMobility::QSystemDeviceInfo::SimStatus"/>
-    <enum-type name="QtMobility::QSystemDisplayInfo::DisplayOrientation"/>
+    <!-- Commented out as of Sep 20th in upstream
+         <enum-type name="QtMobility::QSystemDisplayInfo::DisplayOrientation"/>-->
     <enum-type name="QtMobility::QSystemInfo::Version"/>
     <enum-type name="QtMobility::QSystemInfo::Feature"/>
     <enum-type name="QtMobility::QSystemNetworkInfo::NetworkStatus"/>
