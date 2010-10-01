@@ -53,6 +53,7 @@ IF(${QTVERSION} VERSION_LESS 4.7.0)
 ENDIF()
 
 add_if_found(Contacts)
+add_if_found(Feedback)
 add_if_found(Location)
 add_if_found(Messaging)
 add_if_found(MultimediaKit)

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Feedback">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <namespace-type name="QtMobility" generate="no"/>
+
+    <object-type name="QtMobility::QFeedbackActuator" />
+    <enum-type name="QtMobility::QFeedbackActuator::Capability"/>
+    <enum-type name="QtMobility::QFeedbackActuator::State"/>
+
+    <object-type name="QtMobility::QFeedbackEffect" />
+    <enum-type name="QtMobility::QFeedbackEffect::Duration"/>
+    <enum-type name="QtMobility::QFeedbackEffect::State"/>
+    <enum-type name="QtMobility::QFeedbackEffect::ErrorType"/>
+    <enum-type name="QtMobility::QFeedbackEffect::ThemeEffect"/>
+
+    <object-type name="QtMobility::QFeedbackHapticsEffect" />
+    <object-type name="QtMobility::QFeedbackFileEffect" />
+
+    <!-- TODO Not supported yet
+    <object-type name="QtMobility::QFeedbackInterface" />
+    <object-type name="QtMobility::QFeedbackHapticsInterface" />
+    <object-type name="QtMobility::QFeedbackFileInterface" /> -->
+</typesystem>

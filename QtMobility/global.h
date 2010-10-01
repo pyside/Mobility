@@ -97,6 +97,15 @@
 #include <qtcontacts.h>
 #include <qcontactchangeset.h>
 
+// Feedback
+#include <QFeedbackActuator>
+#include <QFeedbackEffect>
+#include <QFeedbackHapticsEffect>
+#include <QFeedbackFileEffect>
+#include <QFeedbackInterface>
+#include <QFeedbackHapticsInterface>
+#include <QFeedbackFileInterface>
+
 // MultimediaKit
 #include <QAbstractAudioDeviceInfo>
 #include <QAbstractAudioInput>
