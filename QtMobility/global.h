@@ -106,6 +106,24 @@
 #include <QFeedbackHapticsInterface>
 #include <QFeedbackFileInterface>
 
+// Gallery
+#include <QAbstractGallery>
+#include <QDocumentGallery>
+#include <QGalleryAbstractRequest>
+#include <QGalleryAbstractResponse>
+#include <QGalleryFilter>
+#include <QGalleryIntersectionFilter>
+#include <QGalleryItemRequest>
+#include <QGalleryMetaDataFilter>
+#include <QGalleryProperty>
+#include <QGalleryQueryModel>
+#include <QGalleryQueryRequest>
+#include <QGalleryResource>
+#include <QGalleryResultSet>
+#include <QGalleryType>
+#include <QGalleryTypeRequest>
+#include <QGalleryUnionFilter>
+
 // MultimediaKit
 #include <QAbstractAudioDeviceInfo>
 #include <QAbstractAudioInput>

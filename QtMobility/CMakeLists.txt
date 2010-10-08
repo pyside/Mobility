@@ -54,6 +54,7 @@ ENDIF()
 
 add_if_found(Contacts)
 add_if_found(Feedback)
+add_if_found(Gallery)
 add_if_found(Location)
 add_if_found(Messaging)
 add_if_found(MultimediaKit)
