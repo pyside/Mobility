@@ -190,6 +190,72 @@
 #include <QVideoWidgetControl>
 #include <QVideoWindowControl>
 
+//Organizer
+//avoid header inclusion
+#define QTORGANIZERGLOBAL_H
+#define QTORGANIZER_VERSION_NAME "com.nokia.qt.mobility.organizer.api.version"
+#define QTORGANIZER_IMPLEMENTATION_VERSION_NAME "com.nokia.qt.mobility.organizer.implementation.version"
+#define QTORGANIZER_VERSION 1
+
+#include <QOrganizerCollection>
+#include <QOrganizerCollectionEngineLocalId>
+#include <QOrganizerCollectionId>
+#include <QOrganizerCollectionLocalId>
+#include <QOrganizerCollectionRemoveRequest>
+#include <QOrganizerCollectionSaveRequest>
+#include <QOrganizerEvent>
+#include <QOrganizerEventOccurrence>
+#include <QOrganizerEventTimeRange>
+#include <QOrganizerItem>
+#include <QOrganizerItemAbstractRequest>
+#include <QOrganizerItemAudibleReminder>
+#include <QOrganizerItemCollectionFilter>
+#include <QOrganizerItemComment>
+#include <QOrganizerItemDateTimePeriodFilter>
+#include <QOrganizerItemDescription>
+#include <QOrganizerItemDetail>
+#include <QOrganizerItemDetailDefinition>
+#include <QOrganizerItemDetailDefinitionRemoveRequest>
+#include <QOrganizerItemDetailDefinitionSaveRequest>
+#include <QOrganizerItemDetailFieldDefinition>
+#include <QOrganizerItemDetailFilter>
+#include <QOrganizerItemDetailRangeFilter>
+#include <QOrganizerItemDisplayLabel>
+#include <QOrganizerItemEmailReminder>
+#include <QOrganizerItemEngineLocalId>
+#include <QOrganizerItemFilter>
+#include <QOrganizerItemGuid>
+#include <QOrganizerItemId>
+#include <QOrganizerItemInstanceOrigin>
+#include <QOrganizerItemIntersectionFilter>
+#include <QOrganizerItemInvalidFilter>
+#include <QOrganizerItemLocalId>
+#include <QOrganizerItemLocalIdFilter>
+#include <QOrganizerItemLocation>
+#include <QOrganizerItemManager>
+#include <QOrganizerItemManagerEngine>
+#include <QOrganizerItemManagerEngineFactory>
+#include <QOrganizerItemPriority>
+#include <QOrganizerItemRecurrence>
+#include <QOrganizerItemRecurrenceRule>
+#include <QOrganizerItemReminder>
+#include <QOrganizerItemRemoveRequest>
+#include <QOrganizerItemSaveRequest>
+#include <QOrganizerItemSortOrder>
+#include <QOrganizerItemTimestamp>
+#include <QOrganizerItemType>
+#include <QOrganizerItemUnionFilter>
+#include <QOrganizerItemVisualReminder>
+#include <QOrganizerJournal>
+#include <QOrganizerJournalTimeRange>
+#include <QOrganizerNote>
+#include <QOrganizerTodo>
+#include <QOrganizerTodoOccurrence>
+#include <QOrganizerTodoProgress>
+#include <QOrganizerTodoTimeRange>
+
+
+
 // Sensors
 #include <QAccelerometerReading>
 #include <QAccelerometerFilter>
