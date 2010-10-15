@@ -1,6 +1,9 @@
 // Sensors
 // QtMobility global header
 #include "pyside_global.h"
+// Avoid problematic QLatin1Constant definition
+#define QLATIN1CONSTANT_H
+#define Q_DECLARE_LATIN1_CONSTANT(varname, str) static const QString varname
 #include <QtMobility/qmobilityglobal.h>
 
 
@@ -24,9 +27,6 @@
 #endif
 
 // Contacts
-// typedef QLatin1String QLatin1Constant;// replace type
-#define QTCONTACTSGLOBAL_H // avoid define template
-#define Q_DECLARE_LATIN1_CONSTANT(varname, str) static const QString varname
 #include <qtcontacts.h>
 #include <qcontactchangeset.h>
 
