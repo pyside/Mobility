@@ -4,8 +4,7 @@
 // Avoid problematic QLatin1Constant definition
 #define QLATIN1CONSTANT_H
 #define Q_DECLARE_LATIN1_CONSTANT(varname, str) static const QString varname
-#include <QtMobility/qmobilityglobal.h>
-
+#include <qmobilityglobal.h>
 
 // SysInfo
 #include <qsysteminfo.h>
