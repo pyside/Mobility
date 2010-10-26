@@ -1,10 +1,15 @@
 // Sensors
 // QtMobility global header
 #include "pyside_global.h"
-// Avoid problematic QLatin1Constant definition
-#define QLATIN1CONSTANT_H
-#define Q_DECLARE_LATIN1_CONSTANT(varname, str) static const QString varname
 #include <qmobilityglobal.h>
+
+// Avoid problematic QLatin1Constant definition
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 1, 0))
+#define QLATIN1CONSTANT_H
+#else
+#define QTCONTACTSGLOBAL_H
+#endif
+#define Q_DECLARE_LATIN1_CONSTANT(varname, str) static const QString varname
 
 // SysInfo
 #include <qsysteminfo.h>
