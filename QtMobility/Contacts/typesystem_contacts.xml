@@ -41,8 +41,7 @@
     <object-type name="QtMobility::QContactDetailDefinitionRemoveRequest" />
     <object-type name="QtMobility::QContactDetailDefinitionSaveRequest" />
     <value-type name="QtMobility::QContactDetailFieldDefinition">
-        <!-- Rejected; see bug #487 -->
-        <modify-function signature="setAllowableValues(QList&lt;QVariant&gt;)" remove="all" />
+        <modify-function signature="setAllowableValues(QList&lt;QVariant&gt;)" remove="all"/>
     </value-type>
     <value-type name="QtMobility::QContactDetailFilter" />
     <value-type name="QtMobility::QContactDetailRangeFilter" />
