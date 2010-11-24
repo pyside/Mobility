@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Organizer">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <namespace-type name="QtMobility" generate="no"/>
+ 
+    <!-- This type is declared here only to be used by a remove-function tag below --> 
+    <object-type name="QDebug" generate="no" />
+    
+    <enum-type name="QtMobility::QOrganizerAbstractRequest::RequestType" />
+    <enum-type name="QtMobility::QOrganizerAbstractRequest::State" />
+    <enum-type name="QtMobility::QOrganizerItemChangeLogFilter::EventType" />
+    <enum-type name="QtMobility::QOrganizerItemDetailRangeFilter::RangeFlag" />
+    <enum-type name="QtMobility::QOrganizerItemDetail::AccessConstraint" />
+    <enum-type name="QtMobility::QOrganizerItemFetchHint::OptimizationHint" />
+    <enum-type name="QtMobility::QOrganizerItemFilter::FilterType" />
+    <enum-type name="QtMobility::QOrganizerItemFilter::MatchFlag" />
+    <enum-type name="QtMobility::QOrganizerItemManager::Error" />
+    <enum-type name="QtMobility::QOrganizerTodoProgress::Status" />
+    <enum-type name="QtMobility::QOrganizerItemPriority::Priority" />
+    <enum-type name="QtMobility::QOrganizerItemSortOrder::BlankPolicy" />
+    <enum-type name="QtMobility::QOrganizerItemReminder::ReminderType" />
+    <enum-type name="QtMobility::QOrganizerManager::ManagerFeature" />
+    <enum-type name="QtMobility::QOrganizerManager::Error" />
+    <enum-type name="QtMobility::QOrganizerRecurrenceRule::Month" />
+    <enum-type name="QtMobility::QOrganizerRecurrenceRule::Frequency" />
+    <enum-type name="QtMobility::QOrganizerRecurrenceRule::LimitType" />
+    
+    <object-type name="QtMobility::QOrganizerAbstractRequest" />
+    <value-type name="QtMobility::QOrganizerCollection" />
+    <value-type name="QtMobility::QOrganizerCollectionChangeSet" />
+    <!-- Commented out due to bug #485; backend class
+    <object-type name="QtMobility::QOrganizerCollectionEngineId" >
+        <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all" /> 
+    </object-type>
+    -->
+    <object-type name="QtMobility::QOrganizerEvent" />
+    <object-type name="QtMobility::QOrganizerEventOccurrence" />
+    <object-type name="QtMobility::QOrganizerEventTime" />
+    <value-type name="QtMobility::QOrganizerItem" />
+    <object-type name="QtMobility::QOrganizerItemAudibleReminder" />
+    <object-type name="QtMobility::QOrganizerItemChangeLogFilter" />
+    <object-type name="QtMobility::QOrganizerItemChangeSet" />
+    <object-type name="QtMobility::QOrganizerItemComment" />
+    <object-type name="QtMobility::QOrganizerItemDescription" />
+    <value-type name="QtMobility::QOrganizerItemDetail" />
+    <value-type name="QtMobility::QOrganizerItemDetailDefinition" />
+    <object-type name="QtMobility::QOrganizerItemDetailDefinitionFetchRequest" />
+    <object-type name="QtMobility::QOrganizerItemDetailDefinitionRemoveRequest" />
+    <object-type name="QtMobility::QOrganizerItemDetailDefinitionSaveRequest" />
+    <value-type name="QtMobility::QOrganizerItemDetailFieldDefinition">
+        <!-- Same issue as bug #487 -->
+        <modify-function signature="setAllowableValues(QList&lt;QVariant&gt;)" remove="all" />
+    </value-type>
+    <object-type name="QtMobility::QOrganizerItemDetailFilter" />
+    <value-type name="QtMobility::QOrganizerItemDetailRangeFilter" />
+    <object-type name="QtMobility::QOrganizerItemDisplayLabel" />
+    <object-type name="QtMobility::QOrganizerItemEmailReminder" />
+    <!-- Commented out due to bug #485; backend class
+    <object-type name="QtMobility::QOrganizerItemEngineId">
+        <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all" />·
+    </object-type>
+    -->
+    <object-type name="QtMobility::QOrganizerItemFetchForExportRequest" />
+    <value-type name="QtMobility::QOrganizerItemFetchHint" />
+    <object-type name="QtMobility::QOrganizerItemFetchRequest" />
+    <value-type name="QtMobility::QOrganizerItemFilter" />
+    <object-type name="QtMobility::QOrganizerItemGuid" />
+    <value-type name="QtMobility::QOrganizerItemId" />
+    <object-type name="QtMobility::QOrganizerItemIdFetchRequest" />
+    <value-type name="QtMobility::QOrganizerItemIdFilter" />
+    <value-type name="QtMobility::QOrganizerItemIntersectionFilter" />
+    <!-- Present in documentation, but not in the actual code... was removed at some point?
+    <object-type name="QtMobility::QOrganizerItemInvalidEngine" />
+    -->
+    <object-type name="QtMobility::QOrganizerItemInvalidFilter" />
+    <object-type name="QtMobility::QOrganizerItemLocation" />
+    <object-type name="QtMobility::QOrganizerItemOccurrenceFetchRequest" />
+    <object-type name="QtMobility::QOrganizerItemParent" />
+    <object-type name="QtMobility::QOrganizerItemPriority" />
+    <value-type name="QtMobility::QOrganizerItemRecurrence" />
+    <object-type name="QtMobility::QOrganizerItemReminder" />
+    <object-type name="QtMobility::QOrganizerItemRemoveRequest" />
+    <object-type name="QtMobility::QOrganizerItemSaveRequest" />
+    <value-type name="QtMobility::QOrganizerItemSortOrder" />
+    <value-type name="QtMobility::QOrganizerItemTag" />
+    <object-type name="QtMobility::QOrganizerItemTimestamp" />
+    <object-type name="QtMobility::QOrganizerItemType" />
+    <value-type name="QtMobility::QOrganizerItemUnionFilter" />
+    <object-type name="QtMobility::QOrganizerItemVisualReminder" />
+    <object-type name="QtMobility::QOrganizerJournal" />
+    <object-type name="QtMobility::QOrganizerJournalTime" />
+    <object-type name="QtMobility::QOrganizerManager" />
+    <!-- Backend classes
+    <object-type name="QtMobility::QOrganizerManagerEngine" />
+    <object-type name="QtMobility::QOrganizerManagerEngineFactory" />
+    -->
+    <object-type name="QtMobility::QOrganizerNote" />
+    <value-type name="QtMobility::QOrganizerRecurrenceRule" />
+    <object-type name="QtMobility::QOrganizerTodo" />
+    <object-type name="QtMobility::QOrganizerTodoOccurrence" />
+    <object-type name="QtMobility::QOrganizerTodoProgress" />
+    <object-type name="QtMobility::QOrganizerTodoTime" />
+
+</typesystem>
