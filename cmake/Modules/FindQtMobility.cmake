@@ -1,11 +1,11 @@
 INCLUDE(FindQt4)
 
-set(MOBILITY_CONFIG_MKSPECS_FILE "")
-IF(EXISTS "${QT_MKSPECS_DIR}/features/mobilityconfig.prf")
-    set(MOBILITY_CONFIG_MKSPECS_FILE "${QT_MKSPECS_DIR}/features/mobilityconfig.prf")
-ELSEIF(EXISTS "${QT_MKSPECS_DIR}/features/mobility.prf")
+#set(MOBILITY_CONFIG_MKSPECS_FILE "")
+#IF(EXISTS "${QT_MKSPECS_DIR}/features/mobilityconfig.prf")
+#    set(MOBILITY_CONFIG_MKSPECS_FILE "${QT_MKSPECS_DIR}/features/mobilityconfig.prf")
+#ELSEIF(EXISTS "${QT_MKSPECS_DIR}/features/mobility.prf")
     set(MOBILITY_CONFIG_MKSPECS_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules/mobilityconfig.prf")
-ENDIF()
+#ENDIF()
 
 macro(export_component component)
     IF(NOT ${MOBILITY_CONFIG_MKSPECS_FILE} STREQUAL "")
