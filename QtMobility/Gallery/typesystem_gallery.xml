@@ -22,7 +22,7 @@
     <value-type name="QtMobility::QGalleryMetaDataFilter" />
 
     <object-type name="QtMobility::QGalleryItemRequest" />
-    <value-type name="QtMobility::QGalleryProperty">
+    <object-type name="QtMobility::QGalleryProperty">
         <modify-function signature="QGalleryProperty(Array)" remove="all"/>
         <!-- TODO <add-function signature="QGalleryProperty(const char*)">
             <inject-code class="target" position="beginning">
@@ -45,7 +45,11 @@
                 %PYARG_0 = PyString_FromString(%CPPSELF.name().toAscii());
             </inject-code>
         </add-function>
-    </value-type>
+
+        <!-- Private usage but no explicit private declaration in C++ -->
+        <modify-field name="m_length" remove="all"/>
+        <modify-field name="m_name" remove="all"/>
+    </object-type>
     <enum-type name="QtMobility::QGalleryProperty::Attribute" flags="QtMobility::QGalleryProperty::Attributes"/>
 
     <object-type name="QtMobility::QGalleryQueryModel" />
@@ -54,14 +58,14 @@
     <value-type name="QtMobility::QGalleryResource" />
     <object-type name="QtMobility::QGalleryResultSet" />
 
-    <value-type name="QtMobility::QGalleryType">
+    <object-type name="QtMobility::QGalleryType">
         <modify-function signature="QGalleryType(Array)" remove="all"/>
         <add-function signature="__str__()" return-type="PyObject*">
             <inject-code class="target" position="beginning">
                 %PYARG_0 = PyString_FromString(%CPPSELF.name().toAscii());
             </inject-code>
         </add-function>
-    </value-type>
+    </object-type>
     <object-type name="QtMobility::QGalleryTypeRequest" />
 
 </typesystem>
