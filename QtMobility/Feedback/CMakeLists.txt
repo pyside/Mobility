@@ -11,6 +11,12 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhaptics
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticseffect_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileeffect_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileeffect_wrapper.h
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackinterface_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackinterface_wrapper.h
+#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticsinterface_wrapper.cpp
+#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticsinterface_wrapper.h
+#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileinterface_wrapper.cpp
+#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileinterface_wrapper.h
 )
 
 set(Feedback_INCLUDE_DIRECTORIES
