@@ -292,14 +292,25 @@
 //Versit
 #include <QVersitContactExporter>
 #include <QVersitContactExporterDetailHandler>
+#include <QVersitContactExporterDetailHandlerV2>
+#include <QVersitContactHandler>
+#include <QVersitContactHandlerFactory>
 #include <QVersitContactImporter>
 #include <QVersitContactImporterPropertyHandler>
+#include <QVersitContactImporterPropertyHandlerV2>
 #include <QVersitDefaultResourceHandler>
 #include <QVersitDocument>
 #include <QVersitProperty>
 #include <QVersitReader>
 #include <QVersitResourceHandler>
 #include <QVersitWriter>
+
+// VersitOrganizer
+
+#include <qversitorganizerexporter.h>
+#include <qversitorganizerhandler.h>
+#include <qversitorganizerimporter.h>
+#include <qversittimezonehandler.h>
 
 // Messaging
 #include <qmessage.h>
