@@ -21,7 +21,6 @@
     <enum-type name="QtMobility::QContactRelationship::Role" />
     <enum-type name="QtMobility::QContactRelationshipFilter::Role" />
     <enum-type name="QtMobility::QContactSortOrder::BlankPolicy" />
-
     <object-type name="QtMobility::QContactAbstractRequest">
       <modify-function signature="setManager(QtMobility::QContactManager*)">
         <modify-argument index="1">
@@ -41,7 +40,10 @@
     <object-type name="QtMobility::QContactDetailDefinitionFetchRequest" />
     <object-type name="QtMobility::QContactDetailDefinitionRemoveRequest" />
     <object-type name="QtMobility::QContactDetailDefinitionSaveRequest" />
-    <value-type name="QtMobility::QContactDetailFieldDefinition" />
+    <value-type name="QtMobility::QContactDetailFieldDefinition">
+        <!-- Rejected; see bug #487 -->
+        <modify-function signature="setAllowableValues(QList&lt;QVariant&gt;)" remove="all" />
+    </value-type>
     <value-type name="QtMobility::QContactDetailFilter" />
     <value-type name="QtMobility::QContactDetailRangeFilter" />
     <value-type name="QtMobility::QContactDisplayLabel" />
