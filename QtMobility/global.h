@@ -189,6 +189,20 @@
 #include <QVideoWidget>
 #include <QVideoWidgetControl>
 #include <QVideoWindowControl>
+#include <QCamera>
+#include <QCameraControl>
+#include <QCameraExposure>
+#include <QCameraExposureControl>
+#include <QCameraFlashControl>
+#include <QCameraFocus>
+#include <QCameraFocusControl>
+#include <QCameraFocusZone>
+#include <QCameraImageCapture>
+#include <QCameraImageCaptureControl>
+#include <QCameraImageProcessing>
+#include <QCameraImageProcessingControl>
+#include <QCameraLocksControl>
+#include <QCameraViewfinder>
 
 //Organizer
 //avoid header inclusion
