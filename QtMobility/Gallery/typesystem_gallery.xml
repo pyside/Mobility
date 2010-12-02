@@ -9,6 +9,7 @@
     <enum-type name="QtMobility::QDocumentGallery::Error" />
 
     <object-type name="QtMobility::QGalleryAbstractRequest" />
+    <enum-type name="QtMobility::QGalleryAbstractRequest::State" />
     <enum-type name="QtMobility::QGalleryAbstractRequest::Status" />
     <enum-type name="QtMobility::QGalleryAbstractRequest::RequestType" />
     <enum-type name="QtMobility::QGalleryAbstractRequest::RequestError" />
