@@ -40,9 +40,7 @@
     <object-type name="QtMobility::QContactDetailDefinitionFetchRequest" />
     <object-type name="QtMobility::QContactDetailDefinitionRemoveRequest" />
     <object-type name="QtMobility::QContactDetailDefinitionSaveRequest" />
-    <value-type name="QtMobility::QContactDetailFieldDefinition">
-        <modify-function signature="setAllowableValues(QList&lt;QVariant&gt;)" remove="all"/>
-    </value-type>
+    <value-type name="QtMobility::QContactDetailFieldDefinition"/>
     <value-type name="QtMobility::QContactDetailFilter" />
     <value-type name="QtMobility::QContactDetailRangeFilter" />
     <value-type name="QtMobility::QContactDisplayLabel" />
@@ -85,7 +83,7 @@
         </inject-code>
       </modify-function>
     </object-type>
-	<object-type name="QtMobility::QContactManagerEngine"/>
+    <object-type name="QtMobility::QContactManagerEngine"/>
     <object-type name="QtMobility::QContactManagerEngineFactory" />
     <value-type name="QtMobility::QContactName" />
     <value-type name="QtMobility::QContactNickname" />

@@ -47,10 +47,7 @@
     <object-type name="QtMobility::QOrganizerItemDetailDefinitionFetchRequest" />
     <object-type name="QtMobility::QOrganizerItemDetailDefinitionRemoveRequest" />
     <object-type name="QtMobility::QOrganizerItemDetailDefinitionSaveRequest" />
-    <value-type name="QtMobility::QOrganizerItemDetailFieldDefinition">
-        <!-- Same issue as bug #487 -->
-        <modify-function signature="setAllowableValues(QList&lt;QVariant&gt;)" remove="all" />
-    </value-type>
+    <value-type name="QtMobility::QOrganizerItemDetailFieldDefinition"/>
     <object-type name="QtMobility::QOrganizerItemDetailFilter" />
     <value-type name="QtMobility::QOrganizerItemDetailRangeFilter" />
     <object-type name="QtMobility::QOrganizerItemDisplayLabel" />
