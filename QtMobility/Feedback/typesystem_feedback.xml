@@ -3,10 +3,7 @@
     <load-typesystem name="typesystem_core.xml" generate="no"/>
     <namespace-type name="QtMobility" generate="no"/>
 
-    <object-type name="QtMobility::QFeedbackActuator">
-        <!-- Removing rich-compare operators due to: http://bugs.openbossa.org/show_bug.cgi?id=497 -->
-        <modify-function signature="operator==(const QtMobility::QFeedbackActuator&amp;) const" remove="all" />
-    </object-type>
+    <object-type name="QtMobility::QFeedbackActuator"/>
     <enum-type name="QtMobility::QFeedbackActuator::Capability"/>
     <enum-type name="QtMobility::QFeedbackActuator::State"/>
 
@@ -22,11 +19,10 @@
     <object-type name="QtMobility::QFeedbackInterface" />
     <enum-type name="QtMobility::QFeedbackInterface::PluginPriority" />
 
-    <!-- TODO Not supported yet due to: http://bugs.openbossa.org/show_bug.cgi?id=499
     <object-type name="QtMobility::QFeedbackHapticsInterface" />
     <enum-type name="QtMobility::QFeedbackHapticsInterface::ActuatorProperty" />
     <enum-type name="QtMobility::QFeedbackHapticsInterface::EffectProperty" />
     <object-type name="QtMobility::QFeedbackFileInterface" />
-    -->
+
 
 </typesystem>

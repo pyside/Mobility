@@ -45,9 +45,6 @@
     <object-type name="QtMobility::QGeoMapGroupObject" since="1.1"/>
     <object-type name="QtMobility::QGeoMapObject" since="1.1">
         <enum-type name="Type" />
-        <!-- Removing rich-compare operators due to: http://bugs.openbossa.org/show_bug.cgi?id=497 -->
-        <modify-function signature="operator&lt;(const QtMobility::QGeoMapObject &amp;) const" remove="all"/>
-        <modify-function signature="operator&gt;(const QtMobility::QGeoMapObject &amp;) const" remove="all"/>
     </object-type>
     <object-type name="QtMobility::QGeoMapObjectInfo" since="1.1"/>
     <object-type name="QtMobility::QGeoMapOverlay" since="1.1">
