@@ -21,6 +21,8 @@ if(CMAKE_VERSION VERSION_LESS 2.8)
     # Versions lesser than 2.8 can not set environment variables for tests.
     message("CMake version greater than 2.8 necessary to run the tests.")
 else()
+    add_subdirectory(Contacts)
+    add_subdirectory(Feedback)
     add_subdirectory(Messaging)
     add_subdirectory(Gallery)
     add_subdirectory(Organizer)
