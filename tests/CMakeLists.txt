@@ -18,4 +18,4 @@ macro(QTMOBILITY_TEST)
 endmacro(QTMOBILITY_TEST)
 
 add_subdirectory(QtPublishSubscribe)
-
+add_subdirectory(QtGallery)
