@@ -1,0 +1,1 @@
+QTMOBILITY_TEST(qorganizermanager_test.py)
