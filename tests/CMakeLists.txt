@@ -19,3 +19,4 @@ endmacro(QTMOBILITY_TEST)
 
 add_subdirectory(QtPublishSubscribe)
 add_subdirectory(QtGallery)
+add_subdirectory(SystemInfo)
