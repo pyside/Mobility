@@ -18,6 +18,8 @@ fakesensor.h
 fakeplugin.h
 )
 
+link_directories(${QT_MOBILITY_LIBRARY_DIR})
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}
                     ${QT_INCLUDE_DIR}
                     ${QT_QTCORE_INCLUDE_DIR}
