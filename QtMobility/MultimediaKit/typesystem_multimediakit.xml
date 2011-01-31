@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <typesystem package="QtMobility.MultimediaKit">
   <load-typesystem name="typesystem_gui.xml" generate="no" />
+  <load-typesystem name="typesystem_network.xml" generate="no" />
 
   <rejection class="" function-name="qobject_cast&lt;QAudioEngineFactoryInterface*&gt;"/>
   <rejection class="" function-name="qobject_interface_iid&lt;QAudioEngineFactoryInterface*&gt;"/>
