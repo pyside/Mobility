@@ -1,1 +1,2 @@
 QTMOBILITY_TEST(feedback_test.py)
+QTMOBILITY_TEST(qfeedbackactuator_operator_test.py)
