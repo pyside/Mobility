@@ -44,6 +44,10 @@ execute_process(COMMAND cmake -E create_symlink
                 ${CMAKE_CURRENT_BINARY_DIR}/${PLUGIN_FILENAME}
                 ${SENSORS_DIR}/${PLUGIN_FILENAME})
 
+if(INSTALL_TESTS)
+    install(TARGETS fakeplugin LIBRARY DESTINATION "${TEST_INSTALL_DIR}/Sensors/plugins/sensors/")
+endif()
+
 if(WIN32)
     set(PATH_SEP ";")
 else()

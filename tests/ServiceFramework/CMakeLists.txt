@@ -17,3 +17,7 @@ QTMOBILITY_TEST(qservicemanager_test.py)
 set_property(TEST ${TEST_NAME} PROPERTY ENVIRONMENT "QT_PLUGIN_PATH=${ENV_QT_PLUGIN_PATH}")
 
 add_subdirectory(sampleserviceplugin)
+
+if(INSTALL_TESTS)
+    install(FILES sampleservice.xml DESTINATION "${TEST_INSTALL_DIR}/ServiceFramework")
+endif()

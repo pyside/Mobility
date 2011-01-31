@@ -37,3 +37,6 @@ execute_process(COMMAND cmake -E create_symlink
                 ${CMAKE_CURRENT_BINARY_DIR}/${PLUGIN_FILENAME}
                 ${SERVICES_DIR}/${PLUGIN_FILENAME})
 
+if (INSTALL_TESTS)
+    install(TARGETS sampleserviceplugin LIBRARY DESTINATION "${TEST_INSTALL_DIR}/ServiceFramework")
+endif()
