@@ -21,7 +21,6 @@ class AddRemoveService(unittest.TestCase):
         self.manager = QServiceManager()
 
         self.serviceXml = os.path.join(os.path.dirname(__file__),
-                                  'sampleserviceplugin',
                                   'sampleservice.xml')
 
     def testAddRemoveService(self):
