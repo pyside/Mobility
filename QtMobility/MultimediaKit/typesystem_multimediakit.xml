@@ -129,9 +129,25 @@
     </modify-function>
   </object-type>
 
+  <template name="class_iid">
+    PyDict_SetItemString(%PYTHONTYPEOBJECT.tp_dict, "iid", PyString_FromString(%CLASS_NAME_iid));
+  </template>
+
   <object-type name="QAudioCaptureSource" />
-  <object-type name="QAudioEncoderControl" />
-  <object-type name="QAudioEndpointSelector" />
+  <object-type name="QAudioEncoderControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QAudioEncoderControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QAudioEndpointSelector">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QAudioEndpointSelector" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QAudioSystemFactoryInterface">
     <modify-function signature="createInput(const QByteArray&amp;)">
       <modify-argument index="return">
@@ -151,23 +167,71 @@
   </object-type>
   <object-type name="QAudioSystemPlugin" />
   <object-type name="QCamera" />
-  <object-type name="QCameraControl" />
+  <object-type name="QCameraControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QCameraExposure" />
-  <object-type name="QCameraExposureControl" />
+  <object-type name="QCameraExposureControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraExposureControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QCameraFocus" />
-  <object-type name="QCameraFocusControl" />
+  <object-type name="QCameraFocusControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraFocusControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QCameraFocusZone" />
   <object-type name="QCameraImageCapture" />
-  <object-type name="QCameraImageCaptureControl" />
+  <object-type name="QCameraImageCaptureControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraImageCaptureControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QCameraImageProcessing" />
-  <object-type name="QCameraImageProcessingControl" />
-  <object-type name="QCameraLocksControl" />
+  <object-type name="QCameraImageProcessingControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraImageProcessingControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QCameraLocksControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraLocksControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QCameraViewfinder" />
   <object-type name="QGraphicsVideoItem" />
-  <object-type name="QImageEncoderControl" />
+  <object-type name="QImageEncoderControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QImageEncoderControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QLocalMediaPlaylistProvider" />
   <object-type name="QMediaBindableInterface" />
-  <object-type name="QMediaContainerControl" />
+  <object-type name="QMediaContainerControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaContainerControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <value-type name="QMediaContent" />
   <object-type name="QMediaControl" />
   <value-type name="QAudioEncoderSettings" />
@@ -175,9 +239,21 @@
   <value-type name="QImageEncoderSettings" />
   <object-type name="QMediaImageViewer" />
   <object-type name="QMediaObject" />
-  <object-type name="QMediaPlayerControl" />
+  <object-type name="QMediaPlayerControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaPlayerControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QMediaPlayer" />
-  <object-type name="QMediaPlaylistControl" />
+  <object-type name="QMediaPlaylistControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaPlaylistControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QMediaPlaylist" />
   <object-type name="QMediaPlaylistReader" />
   <object-type name="QMediaPlaylistWriter" />
@@ -201,8 +277,20 @@
   <object-type name="QMediaPlaylistIOPlugin" />
   <object-type name="QMediaPlaylistNavigator" />
   <object-type name="QMediaPlaylistProvider" />
-  <object-type name="QMediaPlaylistSourceControl" />
-  <object-type name="QMediaRecorderControl" />
+  <object-type name="QMediaPlaylistSourceControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaPlaylistSourceControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QMediaRecorderControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaRecorderControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QMediaRecorder" />
   <value-type name="QMediaResource" />
   <object-type name="QMediaService" />
@@ -218,17 +306,71 @@
   <object-type name="QMediaServiceSupportedDevicesInterface" />
   <object-type name="QMediaServiceFeaturesInterface" />
   <object-type name="QMediaServiceProviderPlugin" />
-  <object-type name="QMediaStreamsControl" />
+  <object-type name="QMediaStreamsControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaStreamsControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <value-type name="QMediaTimeInterval" />
   <value-type name="QMediaTimeRange" />
-  <object-type name="QMetaDataReaderControl" />
-  <object-type name="QMetaDataWriterControl" />
-  <object-type name="QRadioTunerControl" />
+  <object-type name="QMetaDataReaderControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMetaDataReaderControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QMetaDataWriterControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMetaDataWriterControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QRadioTunerControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QRadioTunerControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QRadioTuner" />
-  <object-type name="QVideoDeviceControl" />
-  <object-type name="QVideoEncoderControl" />
-  <object-type name="QVideoRendererControl" />
-  <object-type name="QVideoWidgetControl" />
+  <object-type name="QVideoDeviceControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QVideoDeviceControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QVideoEncoderControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QVideoEncoderControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QVideoRendererControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QVideoRendererControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
+  <object-type name="QVideoWidgetControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QVideoWidgetControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QVideoWidget" />
-  <object-type name="QVideoWindowControl" />
+  <object-type name="QVideoWindowControl">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QVideoWindowControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
 </typesystem>
