@@ -1,9 +1,16 @@
 #!/usr/bin/python
 
+import os
 import unittest, sys
 from PySide.QtCore import QFile, QTimer, QObject, QIODevice, QDateTime, Qt, QDate
 from PySide.QtGui import QApplication
 from QtMobility.Location import *
+
+from helper import TimedQApplication
+
+def translate_filename(filename):
+    'Helper function to prepend the dir of the current file'
+    return os.path.join(os.path.dirname(__file__), filename)
 
 class LogFilePositionSource(QGeoPositionInfoSource):
     def __init__(self, parent):
@@ -13,9 +20,8 @@ class LogFilePositionSource(QGeoPositionInfoSource):
 
         self.timer.timeout.connect(self.readNextPosition)
 
-        self.logFile.setFileName("simplelog.txt")
-        if not self.logFile.open(QIODevice.ReadOnly):
-            print "Error: cannot open source file", self.logFile.fileName()
+        self.logFile.setFileName(translate_filename('simplelog.txt'))
+        assert self.logFile.open(QIODevice.ReadOnly)
 
         self.lastPosition = QGeoPositionInfo()
 
@@ -23,7 +29,7 @@ class LogFilePositionSource(QGeoPositionInfoSource):
         return self.lastPosition
 
     def minimumUpdateInterval(self):
-        return 500
+        return 100
 
     def startUpdates(self):
         interval = self.updateInterval()
@@ -59,26 +65,49 @@ class LogFilePositionSource(QGeoPositionInfoSource):
                 info = QGeoPositionInfo(coordinate, timestamp)
                 if info.isValid():
                     self.lastPosition = info
-                    print "Info:", info
+                    # Currently segfaulting. See Bug 657
+                    # http://bugs.openbossa.org/show_bug.cgi?id=657
                     self.positionUpdated.emit(info)
-        else:
-            sys.exit(0)
 
 
-class QtLocationUsage(unittest.TestCase):
+class QtLocationUsage(TimedQApplication):
+
+    def parse_position(self, line):
+        timestamp, lat, lng = line.split()
+
+        timestamp = QDateTime.fromString(timestamp, Qt.ISODate)
+        lat = float(lat)
+        lng = float(lng)
+
+        coordinate = QGeoCoordinate(lat, lng)
+        info = QGeoPositionInfo(coordinate, timestamp)
+
+        return info
+
+
+    def parse_positions(self):
+        filename = translate_filename('simplelog.txt')
+        with open(filename) as handle:
+            return [self.parse_position(line.strip()) for line in handle]
+
+    def setUp(self):
+        TimedQApplication.setUp(self, timeout=1000)
+        self.expectedPositions = self.parse_positions()
+        self.positions = []
 
     def positionUpdated(self, info):
-        print "Position updated:", info
+        self.positions.append(info)
 
     def testLocation(self):
-        app = QApplication([])
-        source = LogFilePositionSource(app)
+        source = LogFilePositionSource(self.app)
 
-        if source:
-            source.positionUpdated.connect(self.positionUpdated)
-            source.startUpdates()
+        source.positionUpdated.connect(self.positionUpdated)
+        source.startUpdates()
 
-        sys.exit(app.exec_())
+        self.app.exec_()
+
+        self.assertTrue(self.called)
+        self.assertEqual(positions, expectedPositions)
 
 if __name__ == '__main__':
     unittest.main()
