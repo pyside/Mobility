@@ -20,8 +20,16 @@ macro(export_component component)
     ENDIF()
 endmacro()
 
-IF(EXISTS "${QT_MKSPECS_DIR}/features/mobility.prf")
-    FILE(READ ${QT_MKSPECS_DIR}/features/mobility.prf MOBILITY_FILE_CONTENTS)
+if(EXISTS "${QT_MKSPECS_DIR}/features/mobility12.prf")
+    set(MOBILITY_PRF_FILE "${QT_MKSPECS_DIR}/features/mobility12.prf")
+elseif(EXISTS "${QT_MKSPECS_DIR}/features/mobility11.prf")
+    set(MOBILITY_PRF_FILE "${QT_MKSPECS_DIR}/features/mobility11.prf")
+elseif(EXISTS "${QT_MKSPECS_DIR}/features/mobility.prf")
+    set(MOBILITY_PRF_FILE "${QT_MKSPECS_DIR}/features/mobility.prf")
+endif()
+
+IF(DEFINED MOBILITY_PRF_FILE)
+    FILE(READ ${MOBILITY_PRF_FILE} MOBILITY_FILE_CONTENTS)
 
     STRING(REGEX MATCH "MOBILITY_PREFIX=([^\n]+)" QT_MOBILITY_PREFIX "${MOBILITY_FILE_CONTENTS}")
     SET(QT_MOBILITY_PREFIX ${CMAKE_MATCH_1})
