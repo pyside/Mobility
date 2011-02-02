@@ -3,26 +3,31 @@
     <load-typesystem name="typesystem_core.xml" generate="no"/>
     <namespace-type name="QtMobility" generate="no"/>
 
-    <object-type name="QtMobility::QFeedbackActuator"/>
-    <enum-type name="QtMobility::QFeedbackActuator::Capability"/>
-    <enum-type name="QtMobility::QFeedbackActuator::State"/>
+    <object-type name="QtMobility::QFeedbackActuator">
+        <enum-type name="Capability"/>
+        <enum-type name="State"/>
+    </object-type>
 
-    <object-type name="QtMobility::QFeedbackEffect" />
-    <enum-type name="QtMobility::QFeedbackEffect::Duration"/>
-    <enum-type name="QtMobility::QFeedbackEffect::State"/>
-    <enum-type name="QtMobility::QFeedbackEffect::ErrorType"/>
-    <enum-type name="QtMobility::QFeedbackEffect::ThemeEffect"/>
+    <object-type name="QtMobility::QFeedbackEffect">
+        <enum-type name="Duration"/>
+        <enum-type name="State"/>
+        <enum-type name="ErrorType"/>
+        <enum-type name="ThemeEffect"/>
+    </object-type>
 
     <object-type name="QtMobility::QFeedbackHapticsEffect" />
     <object-type name="QtMobility::QFeedbackFileEffect" />
 
-    <object-type name="QtMobility::QFeedbackInterface" />
-    <enum-type name="QtMobility::QFeedbackInterface::PluginPriority" />
+    <object-type name="QtMobility::QFeedbackInterface">
+        <enum-type name="PluginPriority" />
+    </object-type>
 
-    <object-type name="QtMobility::QFeedbackHapticsInterface" />
-    <enum-type name="QtMobility::QFeedbackHapticsInterface::ActuatorProperty" />
-    <enum-type name="QtMobility::QFeedbackHapticsInterface::EffectProperty" />
+    <object-type name="QtMobility::QFeedbackHapticsInterface">
+        <enum-type name="ActuatorProperty" />
+        <enum-type name="EffectProperty" />
+    </object-type>
     <object-type name="QtMobility::QFeedbackFileInterface" />
+    <object-type name="QtMobility::QFeedbackThemeInterface" />
 
 
 </typesystem>

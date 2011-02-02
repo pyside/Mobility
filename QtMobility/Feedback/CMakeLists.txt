@@ -9,6 +9,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileeff
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackinterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticsinterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileinterface_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackthemeinterface_wrapper.cpp
 )
 
 set(Feedback_INCLUDE_DIRECTORIES
