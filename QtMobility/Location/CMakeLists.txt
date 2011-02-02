@@ -5,163 +5,89 @@ if (${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 1
 else()
     set (QtLocation_11_SRC
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoaddress_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoaddress_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoboundingarea_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoboundingarea_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoboundingbox_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoboundingbox_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoboundingcircle_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoboundingcircle_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaneuver_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaneuver_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapcircleobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapcircleobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapdata_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapdata_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapgroupobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapgroupobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapobjectinfo_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapobjectinfo_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapoverlay_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomapoverlay_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappingmanager_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappingmanager_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappingmanagerengine_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappingmanagerengine_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappixmapobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappixmapobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappolygonobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappolygonobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappolylineobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomappolylineobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaprectangleobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaprectangleobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaprouteobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaprouteobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaptextobject_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeomaptextobject_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoplace_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoplace_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroute_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroute_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutereply_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutereply_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeorouterequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeorouterequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutesegment_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutesegment_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutingmanager_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutingmanager_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutingmanagerengine_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoroutingmanagerengine_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosearchmanager_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosearchmanager_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosearchmanagerengine_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosearchmanagerengine_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosearchreply_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosearchreply_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoserviceprovider_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoserviceprovider_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoserviceproviderfactory_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoserviceproviderfactory_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmapdata_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmapdata_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmappingmanagerengine_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmappingmanagerengine_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmapreply_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmapreply_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmaprequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeotiledmaprequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgraphicsgeomap_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgraphicsgeomap_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmark_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmark_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkabstractrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkabstractrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkattributefilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkattributefilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkboxfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkboxfilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategory_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategory_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryfetchbyidrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryfetchbyidrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryfetchrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryfetchrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryfilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryid_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryid_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryidfetchrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryidfetchrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryremoverequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategoryremoverequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategorysaverequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkcategorysaverequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkexportrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkexportrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkfetchbyidrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkfetchbyidrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkfetchrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkfetchrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkfilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkid_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkid_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkidfetchrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkidfetchrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkidfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkidfilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkimportrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkimportrequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkintersectionfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkintersectionfilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkmanager_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkmanager_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkmanagerengine_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkmanagerengine_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkmanagerenginefactory_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkmanagerenginefactory_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarknamefilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarknamefilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarknamesort_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarknamesort_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkproximityfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkproximityfilter_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkremoverequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkremoverequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarksaverequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarksaverequest_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarksortorder_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarksortorder_wrapper.h
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkunionfilter_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qlandmarkunionfilter_wrapper.h
     )
 endif()
 
 set(Location_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/location_module_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_location_python.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoareamonitor_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeoareamonitor_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeocoordinate_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeocoordinate_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeopositioninfosource_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeopositioninfosource_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeopositioninfo_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeopositioninfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosatelliteinfosource_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosatelliteinfosource_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosatelliteinfo_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qgeosatelliteinfo_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qnmeapositioninfosource_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location/qtmobility_qnmeapositioninfosource_wrapper.h
 ${QtLocation_11_SRC}
 )
 
 set(Location_INCLUDE_DIRECTORIES
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Location
 ${SHIBOKEN_INCLUDE_DIR}
 ${PYTHON_INCLUDE_PATH}
 ${PYSIDE_INCLUDE_DIR}
