@@ -19,10 +19,11 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging/qtmobility_qmessageid_wrap
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging/qtmobility_qmessagemanager_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging/qtmobility_qmessageservice_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging/qtmobility_qmessagesortorder_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging/qtmobility_qmessage_wrapper.cpp                                                                                                                                           )
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging/qtmobility_qmessage_wrapper.cpp
+)
 
 set(Messaging_INCLUDE_DIRECTORIES
-${CMAKE_CURRENT_SOURCE_DIR}
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Messaging
 ${SHIBOKEN_INCLUDE_DIR}
 ${PYTHON_INCLUDE_PATH}
 ${PYSIDE_INCLUDE_DIR}
@@ -47,6 +48,4 @@ CREATE_PYSIDE_MODULE(Messaging
                      Messaging_SRC
                      Messaging_INCLUDE_DIRECTORIES
                      Messaging_LINK_LIBRARIES)
-
-
 
