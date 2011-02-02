@@ -1,5 +1,21 @@
 project(Contacts)
 
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 1)
+    set(Contacts_11_SRC )
+else()
+    set(Contacts_11_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactaction_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactactiondescriptor_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactactionfactory_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactactionfilter_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactactiontarget_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactfavorite_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactfetchbyidrequest_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontacthobby_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactmanagerenginev2_wrapper.cpp
+    )
+endif()
+
 set(Contacts_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/contacts_module_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactabstractrequest_wrapper.cpp
@@ -59,6 +75,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontacttype_wra
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactunionfilter_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontacturl_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontact_wrapper.cpp
+${Contacts_11_SRC}
 )
 
 set(Contacts_INCLUDE_DIRECTORIES

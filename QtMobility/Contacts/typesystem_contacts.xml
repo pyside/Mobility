@@ -109,6 +109,19 @@
     <value-type name="QtMobility::QContactUnionFilter" />
     <value-type name="QtMobility::QContactUrl" />
 
+    <object-type name="QtMobility::QContactAction" since="1.1">
+      <enum-type name="State" />
+    </object-type>
+    <object-type name="QtMobility::QContactActionFactory" since="1.1" />
+    <object-type name="QtMobility::QContactFetchByIdRequest" since="1.1" />
+    <object-type name="QtMobility::QContactManagerEngineV2" since="1.1" />
+    <value-type name="QtMobility::QContactActionDescriptor" since="1.1" />
+    <value-type name="QtMobility::QContactActionFilter" since="1.1" />
+    <value-type name="QtMobility::QContactActionTarget" since="1.1">
+      <enum-type name="Type" />
+    </value-type>
+    <value-type name="QtMobility::QContactFavorite" since="1.1" />
+    <value-type name="QtMobility::QContactHobby" since="1.1" />
 
     <suppress-warning text="Shadowing: QContactDetail::operator=(const QtMobility::QContactDetail &amp; other) and *"/>
     <suppress-warning text="Final class 'QContactAbstractRequest' set to non-final, as it is extended by other classes"/>
