@@ -2,24 +2,17 @@ project(ServiceFramework)
 
 set(ServiceFramework_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qabstractsecuritysession_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qabstractsecuritysession_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservice_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservice_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicecontext_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicecontext_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicefilter_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicefilter_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qserviceinterfacedescriptor_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qserviceinterfacedescriptor_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicemanager_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicemanager_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qserviceplugininterface_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qserviceplugininterface_wrapper.h
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_serviceframework_python.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/serviceframework_module_wrapper.cpp
 )
 
 set(ServiceFramework_INCLUDE_DIRECTORIES
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework
 ${SHIBOKEN_INCLUDE_DIR}
 ${PYTHON_INCLUDE_PATH}
 ${PYSIDE_INCLUDE_DIR}
