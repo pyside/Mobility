@@ -2,24 +2,17 @@ project(Feedback)
 
 set(Feedback_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/feedback_module_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_feedback_python.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackactuator_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackactuator_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackeffect_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackeffect_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticseffect_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticseffect_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileeffect_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileeffect_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackinterface_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackinterface_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticsinterface_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackhapticsinterface_wrapper.h
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileinterface_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback/qtmobility_qfeedbackfileinterface_wrapper.h
 )
 
 set(Feedback_INCLUDE_DIRECTORIES
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Feedback
 ${SHIBOKEN_INCLUDE_DIR}
 ${PYTHON_INCLUDE_PATH}
 ${PYSIDE_INCLUDE_DIR}
