@@ -25,13 +25,13 @@ class AddRemoveService(unittest.TestCase):
 
     def testAddRemoveService(self):
         self.assertTrue(self.manager.addService(self.serviceXml))
-        self.assertEqual(self.manager.findServices(), ['SampleService'])
+        self.assertTrue('SampleService' in self.manager.findServices())
         self.assertTrue(self.settings.value('installed'))
 
         self.assertEqual(self.manager.findServices('com.nokia.qt.TestInterfaceA'),
                          ['SampleService'])
         self.assertTrue(self.manager.removeService('SampleService'))
-        self.assertEqual(self.manager.findServices(), [])
+        self.assertTrue('SampleService' not in self.manager.findServices())
 
         self.assertEqual(self.manager.findServices('com.nokia.qt.TestInterfaceA'), [])
         self.assertFalse(self.settings.value('installed'))
