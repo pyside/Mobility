@@ -17,7 +17,7 @@ class QtFeedbackKeyFeature(unittest.TestCase):
 
         actuator = QFeedbackActuator()
         actuator.enabledChanged.connect(self.callback)
-        actuator.setEnabled(True)
+        actuator.setEnabled(not actuator.isEnabled())
 
         self.assert_(self.wasCalled)
 
