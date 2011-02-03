@@ -1,10 +1,10 @@
 import unittest
 
 from PySide.QtCore import *
-from helper import UsesQCoreApplication
+from helper import UsesQApplication
 from QtMobility.Feedback import QFeedbackActuator
 
-class QFeedbackActuatorOperatorTest(UsesQCoreApplication):
+class QFeedbackActuatorOperatorTest(UsesQApplication):
 
     def testOperators(self):
         a = QFeedbackActuator()
