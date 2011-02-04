@@ -30,11 +30,6 @@
             </inject-code>
         </add-function>-->
 
-        <modify-function signature="operator&lt;(const QVariant&amp;) const" remove="all"/>
-        <modify-function signature="operator&lt;=(const QVariant&amp;) const" remove="all"/>
-        <modify-function signature="operator==(const QVariant&amp;) const" remove="all"/>
-        <modify-function signature="operator&gt;(const QVariant&amp;) const" remove="all"/>
-        <modify-function signature="operator&gt;=(const QVariant&amp;) const" remove="all"/>
         <add-function signature="equals(const QVariant&amp;) const" return-type="QtMobility::QGalleryMetaDataFilter">
             <inject-code class="target" position="beginning">
                 %PYARG_0 = %CONVERTTOPYTHON[QGalleryMetaDataFilter](*(%CPPSELF) == %1);
