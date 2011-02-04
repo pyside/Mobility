@@ -1,13 +1,5 @@
 project(MultimediaKit)
 
-if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 1)
-    set(MultimediaKit_11_SRC )
-else()
-    set(MultimediaKit_11_SRC
-    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuszone_wrapper.cpp
-    )
-endif()
-
 set(MultimediaKit_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/multimediakit_module_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qabstractaudiodeviceinfo_wrapper.cpp
@@ -86,7 +78,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideosurfaceformat_wr
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideowidgetcontrol_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideowidget_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideowindowcontrol_wrapper.cpp
-${MultimediaKit_11_SRC}
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuszone_wrapper.cpp
 )
 
 set(MultimediaKit_INCLUDE_DIRECTORIES

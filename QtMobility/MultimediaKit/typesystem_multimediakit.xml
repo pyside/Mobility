@@ -24,7 +24,7 @@
   <enum-type name="QCameraExposureControl::ParameterFlag" flags="QCameraExposureControl::ParameterFlags" />
   <enum-type name="QCameraExposure::ExposureMode"/>
   <enum-type name="QCameraExposure::MeteringMode"/>
-  <enum-type name="QCameraExposure::FlashMode" flags="QCameraExposure::FlashModes" since="1.1" />
+  <enum-type name="QCameraExposure::FlashMode" flags="QCameraExposure::FlashModes" />
   <enum-type name="QCameraImageProcessing::WhiteBalanceMode"/>
   <enum-type name="QCameraFocus::FocusPointMode"/>
   <enum-type name="QCameraFocus::FocusMode"/>
@@ -190,7 +190,7 @@
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraFocusZone" since="1.1" >
+  <object-type name="QCameraFocusZone">
     <enum-type name="FocusZoneStatus" />
   </object-type>
   <object-type name="QCameraImageCapture" />
