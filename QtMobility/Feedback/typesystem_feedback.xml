@@ -25,9 +25,13 @@
     <object-type name="QtMobility::QFeedbackHapticsInterface">
         <enum-type name="ActuatorProperty" />
         <enum-type name="EffectProperty" />
+        <modify-function signature="instance()" remove="all" />
     </object-type>
-    <object-type name="QtMobility::QFeedbackFileInterface" />
-    <object-type name="QtMobility::QFeedbackThemeInterface" />
-
+    <object-type name="QtMobility::QFeedbackFileInterface">
+        <modify-function signature="instance()" remove="all" />
+    </object-type>
+    <object-type name="QtMobility::QFeedbackThemeInterface">
+        <modify-function signature="instance()" remove="all"/>
+    </object-type>
 
 </typesystem>
