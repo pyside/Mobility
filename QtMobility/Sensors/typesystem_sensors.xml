@@ -6,7 +6,7 @@
     <rejection class="*" field-name="type" />
 
     <primitive-type name="QtMobility::qtimestamp">
-        <include file-name="qtimestamp" location="global" />
+        <include file-name="QSensor" location="global" />
         <conversion-rule file="qtimestamp_conversion.h"/>
     </primitive-type>
 
