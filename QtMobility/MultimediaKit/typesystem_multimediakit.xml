@@ -297,6 +297,7 @@
   <value-type name="QMediaResource" />
   <object-type name="QMediaService" />
   <value-type name="QMediaServiceProviderHint" />
+  <object-type name="QMediaServiceProvider" />
   <object-type name="QMediaServiceProviderFactoryInterface">
     <modify-function signature="create(const QString&amp;)">
       <modify-argument index="return">

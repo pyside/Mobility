@@ -57,6 +57,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaresource_wrapper
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaservicefeaturesinterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaserviceproviderfactoryinterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaserviceproviderhint_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaserviceprovider_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaserviceproviderplugin_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaservicesupporteddevicesinterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmediaservicesupportedformatsinterface_wrapper.cpp
