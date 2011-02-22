@@ -37,12 +37,6 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-option(AVOID_PROTECTED_HACK "Avoid protected hack on generated bindings." FALSE)
-if(AVOID_PROTECTED_HACK OR WIN32)
-    add_definitions(-DAVOID_PROTECTED_HACK)
-    message(STATUS "Avoiding protected hack!")
-endif()
-
 set(BINDING_NAME QtMobility)
 set(BINDING_API_MAJOR_VERSION "0")
 set(BINDING_API_MINOR_VERSION "2")
@@ -110,6 +104,13 @@ else()
 endif()
 
 set(GENERATOR_EXTRA_FLAGS --generatorSet=shiboken --enable-parent-ctor-heuristic --enable-pyside-extensions --enable-return-value-heuristic)
+if(WIN32 OR DEFINED AVOID_PROTECTED_HACK)
+    message(STATUS "PySide-Mobility will be generated avoiding the protected hack!")
+    set(GENERATOR_EXTRA_FLAGS ${GENERATOR_EXTRA_FLAGS} --avoid-protected-hack)
+    add_definitions(-DAVOID_PROTECTED_HACK)
+else()
+    message(STATUS "PySide-Mobility will be generated using the protected hack!")
+endif()
 
 enable_testing()
 
