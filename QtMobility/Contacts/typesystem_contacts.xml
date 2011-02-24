@@ -2,126 +2,126 @@
 <typesystem package="QtMobility.Contacts">
     <load-typesystem name="typesystem_core.xml" generate="no"/>
     <load-typesystem name="typesystem_gui.xml" generate="no"/>
-    <namespace-type name="QtMobility" generate="no"/>
+    <namespace-type name="QtMobility" generate="no">
+        <primitive-type name="QContactLocalId"/>
 
+        <enum-type name="QContactAbstractRequest::State" />
+        <enum-type name="QContactAbstractRequest::RequestType" />
+        <enum-type name="QContactChangeLogFilter::EventType" />
+        <enum-type name="QContactDetail::AccessConstraint" flags="QtMobility::QContactDetail::AccessConstraints" />
+        <enum-type name="QContactDetailRangeFilter::RangeFlag" flags="QtMobility::QContactDetailRangeFilter::RangeFlags" />
+        <enum-type name="QContactFetchHint::OptimizationHint" flags="QtMobility::QContactFetchHint::OptimizationHints" />
+        <enum-type name="QContactFilter::FilterType" />
+        <enum-type name="QContactFilter::MatchFlag" flags="QtMobility::QContactFilter::MatchFlags" />
+        <enum-type name="QContactManager::Error" />
+        <enum-type name="QContactManager::ManagerFeature" />
+        <enum-type name="QContactPresence::PresenceState" />
+        <enum-type name="QContactRelationship::Role" />
+        <enum-type name="QContactRelationshipFilter::Role" />
+        <enum-type name="QContactSortOrder::BlankPolicy" />
+        <object-type name="QContactAbstractRequest">
+        <modify-function signature="setManager(QtMobility::QContactManager*)">
+            <modify-argument index="1">
+            <parent index="this" action="add"/>
+            </modify-argument>
+        </modify-function>
+        </object-type>
+        <value-type name="QContactDetail" hash-function="qHash" />
+        <value-type name="QContact" hash-function="qHash" />
+        <value-type name="QContactAddress" />
+        <value-type name="QContactAnniversary" />
+        <value-type name="QContactAvatar" />
+        <value-type name="QContactBirthday" />
+        <value-type name="QContactChangeLogFilter" />
+        <value-type name="QContactChangeSet" />
+        <value-type name="QContactDetailDefinition" />
+        <object-type name="QContactDetailDefinitionFetchRequest" />
+        <object-type name="QContactDetailDefinitionRemoveRequest" />
+        <object-type name="QContactDetailDefinitionSaveRequest" />
+        <value-type name="QContactDetailFieldDefinition"/>
+        <value-type name="QContactDetailFilter" />
+        <value-type name="QContactDetailRangeFilter" />
+        <value-type name="QContactDisplayLabel" />
+        <value-type name="QContactEmailAddress" />
+        <value-type name="QContactFamily" />
+        <value-type name="QContactFetchHint" />
+        <object-type name="QContactFetchRequest" />
+        <value-type name="QContactFilter" />
+        <value-type name="QContactGender" />
+        <value-type name="QContactGeoLocation" />
+        <value-type name="QContactGlobalPresence" />
+        <value-type name="QContactGuid" />
+        <value-type name="QContactId" hash-function="qHash" />
+        <value-type name="QContactIntersectionFilter" />
+        <value-type name="QContactInvalidFilter" />
+        <object-type name="QContactLocalIdFetchRequest" />
+        <value-type name="QContactLocalIdFilter" />
+        <object-type name="QContactManager">
+        <modify-function signature="saveContacts(QList&lt;QtMobility::QContact&gt;*, QMap&lt;int, QtMobility::QContactManager::Error&gt;*)">
+            <modify-argument index="1">
+            <replace-type modified-type="PySequence" />
+            </modify-argument>
+            <modify-argument index="2">
+                <remove-argument/>
+            </modify-argument>
+            <modify-argument index="return">
+                <replace-type modified-type="PyTuple" />
+            </modify-argument>
+            <inject-code class="target" position="beginning">
+                int numItems = PySequence_Length(%PYARG_1);
+                QList&lt;QtMobility::QContact&gt; contacts;
+                for (int i=0; i &lt; numItems; i++) {
+                Shiboken::AutoDecRef contact(PySequence_GetItem(%PYARG_1, i));
+                contacts.append(%CONVERTTOCPP[QtMobility::QContact](contact));
+                }
 
-    <primitive-type name="QtMobility::QContactLocalId"/>
+                QMap&lt;int, QtMobility::QContactManager::Error&gt; errorMap;
+                %RETURN_TYPE retval_ = %CPPSELF.%FUNCTION_NAME(&amp;contacts, &amp;errorMap);
+                %PYARG_0 = Shiboken::makeTuple(retval_, errorMap);
+            </inject-code>
+        </modify-function>
+        </object-type>
+        <object-type name="QContactManagerEngine"/>
+        <object-type name="QContactManagerEngineFactory" />
+        <value-type name="QContactName" />
+        <value-type name="QContactNickname" />
+        <value-type name="QContactNote" />
+        <value-type name="QContactOnlineAccount" />
+        <value-type name="QContactOrganization" />
+        <value-type name="QContactPhoneNumber" />
+        <value-type name="QContactPresence" />
+        <value-type name="QContactRelationship" hash-function="qHash" />
+        <object-type name="QContactRelationshipFetchRequest" />
+        <value-type name="QContactRelationshipFilter" />
+        <object-type name="QContactRelationshipRemoveRequest" />
+        <object-type name="QContactRelationshipSaveRequest" />
+        <object-type name="QContactRemoveRequest" />
+        <value-type name="QContactRingtone" />
+        <object-type name="QContactSaveRequest" />
+        <value-type name="QContactSortOrder" />
+        <value-type name="QContactSyncTarget" />
+        <value-type name="QContactTag" />
+        <value-type name="QContactThumbnail" />
+        <value-type name="QContactTimestamp" />
+        <value-type name="QContactType" />
+        <value-type name="QContactUnionFilter" />
+        <value-type name="QContactUrl" />
 
-    <enum-type name="QtMobility::QContactAbstractRequest::State" />
-    <enum-type name="QtMobility::QContactAbstractRequest::RequestType" />
-    <enum-type name="QtMobility::QContactChangeLogFilter::EventType" />
-    <enum-type name="QtMobility::QContactDetail::AccessConstraint" flags="QtMobility::QContactDetail::AccessConstraints" />
-    <enum-type name="QtMobility::QContactDetailRangeFilter::RangeFlag" flags="QtMobility::QContactDetailRangeFilter::RangeFlags" />
-    <enum-type name="QtMobility::QContactFetchHint::OptimizationHint" flags="QtMobility::QContactFetchHint::OptimizationHints" />
-    <enum-type name="QtMobility::QContactFilter::FilterType" />
-    <enum-type name="QtMobility::QContactFilter::MatchFlag" flags="QtMobility::QContactFilter::MatchFlags" />
-    <enum-type name="QtMobility::QContactManager::Error" />
-    <enum-type name="QtMobility::QContactManager::ManagerFeature" />
-    <enum-type name="QtMobility::QContactPresence::PresenceState" />
-    <enum-type name="QtMobility::QContactRelationship::Role" />
-    <enum-type name="QtMobility::QContactRelationshipFilter::Role" />
-    <enum-type name="QtMobility::QContactSortOrder::BlankPolicy" />
-    <object-type name="QtMobility::QContactAbstractRequest">
-      <modify-function signature="setManager(QtMobility::QContactManager*)">
-        <modify-argument index="1">
-          <parent index="this" action="add"/>
-        </modify-argument>
-      </modify-function>
-    </object-type>
-    <value-type name="QtMobility::QContactDetail" hash-function="qHash" />
-    <value-type name="QtMobility::QContact" hash-function="qHash" />
-    <value-type name="QtMobility::QContactAddress" />
-    <value-type name="QtMobility::QContactAnniversary" />
-    <value-type name="QtMobility::QContactAvatar" />
-    <value-type name="QtMobility::QContactBirthday" />
-    <value-type name="QtMobility::QContactChangeLogFilter" />
-    <value-type name="QtMobility::QContactChangeSet" />
-    <value-type name="QtMobility::QContactDetailDefinition" />
-    <object-type name="QtMobility::QContactDetailDefinitionFetchRequest" />
-    <object-type name="QtMobility::QContactDetailDefinitionRemoveRequest" />
-    <object-type name="QtMobility::QContactDetailDefinitionSaveRequest" />
-    <value-type name="QtMobility::QContactDetailFieldDefinition"/>
-    <value-type name="QtMobility::QContactDetailFilter" />
-    <value-type name="QtMobility::QContactDetailRangeFilter" />
-    <value-type name="QtMobility::QContactDisplayLabel" />
-    <value-type name="QtMobility::QContactEmailAddress" />
-    <value-type name="QtMobility::QContactFamily" />
-    <value-type name="QtMobility::QContactFetchHint" />
-    <object-type name="QtMobility::QContactFetchRequest" />
-    <value-type name="QtMobility::QContactFilter" />
-    <value-type name="QtMobility::QContactGender" />
-    <value-type name="QtMobility::QContactGeoLocation" />
-    <value-type name="QtMobility::QContactGlobalPresence" />
-    <value-type name="QtMobility::QContactGuid" />
-    <value-type name="QtMobility::QContactId" hash-function="qHash" />
-    <value-type name="QtMobility::QContactIntersectionFilter" />
-    <value-type name="QtMobility::QContactInvalidFilter" />
-    <object-type name="QtMobility::QContactLocalIdFetchRequest" />
-    <value-type name="QtMobility::QContactLocalIdFilter" />
-    <object-type name="QtMobility::QContactManager">
-      <modify-function signature="saveContacts(QList&lt;QtMobility::QContact&gt;*, QMap&lt;int, QtMobility::QContactManager::Error&gt;*)">
-        <modify-argument index="1">
-           <replace-type modified-type="PySequence" />
-        </modify-argument>
-        <modify-argument index="2">
-            <remove-argument/>
-        </modify-argument>
-        <modify-argument index="return">
-            <replace-type modified-type="PyTuple" />
-        </modify-argument>
-        <inject-code class="target" position="beginning">
-            int numItems = PySequence_Length(%PYARG_1);
-            QList&lt;QtMobility::QContact&gt; contacts;
-            for (int i=0; i &lt; numItems; i++) {
-               Shiboken::AutoDecRef contact(PySequence_GetItem(%PYARG_1, i));
-               contacts.append(%CONVERTTOCPP[QtMobility::QContact](contact));
-            }
+        <object-type name="QContactAction" since="1.1">
+        <enum-type name="State" />
+        </object-type>
+        <object-type name="QContactActionFactory" since="1.1" />
+        <object-type name="QContactFetchByIdRequest" since="1.1" />
+        <object-type name="QContactManagerEngineV2" since="1.1"/>
+        <value-type name="QContactActionDescriptor" since="1.1" />
+        <value-type name="QContactActionFilter" since="1.1" />
+        <value-type name="QContactActionTarget" since="1.1">
+        <enum-type name="Type" />
+        </value-type>
+        <value-type name="QContactFavorite" since="1.1" />
+        <value-type name="QContactHobby" since="1.1" />
 
-            QMap&lt;int, QtMobility::QContactManager::Error&gt; errorMap;
-            %RETURN_TYPE retval_ = %CPPSELF.%FUNCTION_NAME(&amp;contacts, &amp;errorMap);
-            %PYARG_0 = Shiboken::makeTuple(retval_, errorMap);
-        </inject-code>
-      </modify-function>
-    </object-type>
-    <object-type name="QtMobility::QContactManagerEngine"/>
-    <object-type name="QtMobility::QContactManagerEngineFactory" />
-    <value-type name="QtMobility::QContactName" />
-    <value-type name="QtMobility::QContactNickname" />
-    <value-type name="QtMobility::QContactNote" />
-    <value-type name="QtMobility::QContactOnlineAccount" />
-    <value-type name="QtMobility::QContactOrganization" />
-    <value-type name="QtMobility::QContactPhoneNumber" />
-    <value-type name="QtMobility::QContactPresence" />
-    <value-type name="QtMobility::QContactRelationship" hash-function="qHash" />
-    <object-type name="QtMobility::QContactRelationshipFetchRequest" />
-    <value-type name="QtMobility::QContactRelationshipFilter" />
-    <object-type name="QtMobility::QContactRelationshipRemoveRequest" />
-    <object-type name="QtMobility::QContactRelationshipSaveRequest" />
-    <object-type name="QtMobility::QContactRemoveRequest" />
-    <value-type name="QtMobility::QContactRingtone" />
-    <object-type name="QtMobility::QContactSaveRequest" />
-    <value-type name="QtMobility::QContactSortOrder" />
-    <value-type name="QtMobility::QContactSyncTarget" />
-    <value-type name="QtMobility::QContactTag" />
-    <value-type name="QtMobility::QContactThumbnail" />
-    <value-type name="QtMobility::QContactTimestamp" />
-    <value-type name="QtMobility::QContactType" />
-    <value-type name="QtMobility::QContactUnionFilter" />
-    <value-type name="QtMobility::QContactUrl" />
-
-    <object-type name="QtMobility::QContactAction" since="1.1">
-      <enum-type name="State" />
-    </object-type>
-    <object-type name="QtMobility::QContactActionFactory" since="1.1" />
-    <object-type name="QtMobility::QContactFetchByIdRequest" since="1.1" />
-    <object-type name="QtMobility::QContactManagerEngineV2" since="1.1" />
-    <value-type name="QtMobility::QContactActionDescriptor" since="1.1" />
-    <value-type name="QtMobility::QContactActionFilter" since="1.1" />
-    <value-type name="QtMobility::QContactActionTarget" since="1.1">
-      <enum-type name="Type" />
-    </value-type>
-    <value-type name="QtMobility::QContactFavorite" since="1.1" />
-    <value-type name="QtMobility::QContactHobby" since="1.1" />
+    </namespace-type>
 
     <suppress-warning text="Shadowing: QContactDetail::operator=(const QtMobility::QContactDetail &amp; other) and *"/>
     <suppress-warning text="Final class 'QContactAbstractRequest' set to non-final, as it is extended by other classes"/>
