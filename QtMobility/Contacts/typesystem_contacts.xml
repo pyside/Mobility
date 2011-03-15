@@ -88,6 +88,7 @@
         <value-type name="QContactNote" />
         <value-type name="QContactOnlineAccount" />
         <value-type name="QContactOrganization" />
+        <object-type name="QContactObserver" since="1.2"/>
         <value-type name="QContactPhoneNumber" />
         <value-type name="QContactPresence" />
         <value-type name="QContactRelationship" hash-function="qHash" />

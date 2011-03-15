@@ -1,5 +1,14 @@
 project(Contacts)
 
+
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 2)
+    set(Contacts_12_SRC )
+else()
+    set(Contacts_12_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactobserver_wrapper.cpp
+    )
+endif()
+
 if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 1)
     set(Contacts_11_SRC )
 else()
@@ -13,6 +22,7 @@ else()
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactfetchbyidrequest_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontacthobby_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Contacts/qtmobility_qcontactmanagerenginev2_wrapper.cpp
+    ${Contacts_12_SRC}
     )
 endif()
 
