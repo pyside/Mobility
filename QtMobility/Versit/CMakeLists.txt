@@ -1,5 +1,19 @@
 project(Versit)
 
+if(${QT_MOBILITY_VERSITORGANIZER_FOUND})
+    set(VersitOrganizer_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerexporter_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerexporterdetailhandler_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerhandler_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerhandlerfactory_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerimporter_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerimporterpropertyhandler_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/versit_module_wrapper.cpp
+    )
+else()
+    set(VersitOrganizer_SRC )
+endif()
+
 set(Versit_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitcontactexporter_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitcontactexporterdetailhandler_wrapper.cpp
@@ -22,6 +36,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitreader_wrap
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitresourcehandler_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitwriter_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/versit_module_wrapper.cpp
+${VersitOrganizer_SRC}
 )
 
 set(Versit_INCLUDE_DIRECTORIES
