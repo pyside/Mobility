@@ -357,7 +357,6 @@ QT_END_HEADER
 #include <QtNetwork/QtNetwork>
 #include <QtScript/QtScript>
 #include <QtScriptTools/QtScriptTools>
-#include <QtMultimedia/QtMultimedia>
 #include <QtMaemo5/QtMaemo5>
 #include <QtDeclarative/QtDeclarative>
 
