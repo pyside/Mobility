@@ -68,14 +68,14 @@ ${QT_MOBILITY_ORGANIZER_LIBRARY}
 ${QT_MOBILITY_VERSIT_LIBRARY}
 ${QT_MOBILITY_VERSITORGANIZER_LIBRARY}
 )
-set(typesystem_path ${Contacts_SOURCE_DIR}:${Organizer_SOURCE_DIR})
+set(Versit_TYPESYSTEM_PATHS "${Contacts_SOURCE_DIR}:${Organizer_SOURCE_DIR}")
 CREATE_PYSIDE_MODULE(Versit
                      ${QT_MOBILITY_VERSIT_INCLUDE_DIR}:${QT_MOBILITY_CONTACTS_INCLUDE_DIR}:${QT_MOBILITY_ORGANIZER_INCLUDE_DIR}:${QT_MOBILITY_VERSITORGANIZER_INCLUDE_DIR}
                      Versit_SRC
                      Versit_INCLUDE_DIRECTORIES
-                     Versit_LINK_LIBRARIES)
+                     Versit_LINK_LIBRARIES
+                     Versit_TYPESYSTEM_PATHS)
 
-set(typesystem_path "")
 
 add_dependencies(Versit Contacts Organizer)
 

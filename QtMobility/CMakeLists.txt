@@ -5,7 +5,21 @@ install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/__init__.py"
 
 link_directories(${QT_MOBILITY_LIBRARY_DIR})
 
+# Old macro without support for custom typesystem paths and guesses the
+# typesystem from the module name.
 macro(CREATE_PYSIDE_MODULE MODULE_NAME MODULE_INCLUDE_DIR SRCS INC_DIRS LINK_LIBS)
+    STRING(TOLOWER ${MODULE_NAME} LOWER_MODULE_NAME)
+    CREATE_PYSIDE_MODULE_WITH_TYPESYSTEM(${MODULE_NAME}
+                                         ${MODULE_INCLUDE_DIR}
+                                         ${SRCS}
+                                         ${INC_DIRS}
+                                         ${LINK_LIBS}
+                                         ""
+                                         ${CMAKE_CURRENT_SOURCE_DIR}/typesystem_${LOWER_MODULE_NAME}.xml)
+endmacro(CREATE_PYSIDE_MODULE)
+
+# New macro that accepts the typesystem and typesystem paths explicitly
+macro(CREATE_PYSIDE_MODULE_WITH_TYPESYSTEM MODULE_NAME MODULE_INCLUDE_DIR SRCS INC_DIRS LINK_LIBS TYPESYSTEM_PATHS TYPESYSTEM)
     STRING(TOLOWER ${MODULE_NAME} LOWER_MODULE_NAME)
     STRING(TOLOWER ${BINDING_NAME} LOWER_BINDING_NAME)
     include_directories(${MODULE_NAME} ${${INC_DIRS}})
@@ -17,10 +31,10 @@ macro(CREATE_PYSIDE_MODULE MODULE_NAME MODULE_INCLUDE_DIR SRCS INC_DIRS LINK_LIB
                         COMMAND ${GENERATOR} ${GENERATOR_EXTRA_FLAGS}
                         ${CMAKE_SOURCE_DIR}/${BINDING_NAME}/global.h
                         --include-paths=${MODULE_INCLUDE_DIR}:${QT_MOBILITY_INCLUDE_DIR}:${QT_MOBILITY_PARENT_INCLUDE_DIR}:${QT_INCLUDE_DIR}
-                        --typesystem-paths=${typesystem_path}:${PYSIDE_TYPESYSTEMS}
+                        --typesystem-paths=${${TYPESYSTEM_PATHS}}:${PYSIDE_TYPESYSTEMS}
                         --output-directory=${CMAKE_CURRENT_BINARY_DIR}
                         --license-file=${CMAKE_CURRENT_SOURCE_DIR}/../licensecomment.txt
-                        ${CMAKE_CURRENT_SOURCE_DIR}/typesystem_${LOWER_MODULE_NAME}.xml
+                        ${TYPESYSTEM}
                         --api-version=${QT_MOBILITY_MAJOR_VERSION}.${QT_MOBILITY_MINOR_VERSION}
                         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
                         COMMENT "Running generator for ${MODULE_NAME}..."
@@ -32,7 +46,7 @@ macro(CREATE_PYSIDE_MODULE MODULE_NAME MODULE_INCLUDE_DIR SRCS INC_DIRS LINK_LIB
 
     execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_BINARY_DIR}/${MODULE_NAME}${CMAKE_DEBUG_POSTFIX}${CMAKE_SHARED_MODULE_SUFFIX}"
                                                                "${CMAKE_BINARY_DIR}/${BINDING_NAME}/${MODULE_NAME}${CMAKE_SHARED_MODULE_SUFFIX}")
-endmacro(CREATE_PYSIDE_MODULE)
+endmacro(CREATE_PYSIDE_MODULE_WITH_TYPESYSTEM)
 
 
 execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink "${CMAKE_CURRENT_SOURCE_DIR}/__init__.py"
