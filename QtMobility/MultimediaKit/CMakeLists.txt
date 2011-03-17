@@ -1,5 +1,25 @@
 project(MultimediaKit)
 
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 1)
+    set(MultimediaKit_11_SRC )
+else()
+    set(MultimediaKit_11_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameracontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraexposurecontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraexposure_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuscontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocus_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimagecapturecontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimagecapture_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimageprocessingcontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimageprocessing_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameralockscontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraviewfinder_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamera_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuszone_wrapper.cpp
+    )
+endif()
+
 set(MultimediaKit_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/multimediakit_module_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qabstractaudiodeviceinfo_wrapper.cpp
@@ -18,18 +38,6 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qaudiooutput_wrapper.c
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qaudiosystemfactoryinterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qaudiosystemplugin_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qaudio_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameracontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraexposurecontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraexposure_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuscontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocus_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimagecapturecontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimagecapture_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimageprocessingcontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraimageprocessing_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameralockscontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraviewfinder_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamera_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qgraphicsvideoitem_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qimageencodercontrol_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qimageencodersettings_wrapper.cpp
@@ -79,7 +87,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideosurfaceformat_wr
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideowidgetcontrol_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideowidget_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qvideowindowcontrol_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuszone_wrapper.cpp
+${MultimediaKit_11_SRC}
 )
 
 set(MultimediaKit_INCLUDE_DIRECTORIES

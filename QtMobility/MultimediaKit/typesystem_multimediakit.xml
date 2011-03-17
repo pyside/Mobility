@@ -15,25 +15,25 @@
   <enum-type name="QAbstractVideoSurface::Error"/>
   <enum-type name="QAudioFormat::Endian"/>
   <enum-type name="QAudioFormat::SampleType"/>
-  <enum-type name="QCameraImageProcessingControl::ProcessingParameter"/>
-  <enum-type name="QCameraImageCapture::DriveMode"/>
-  <enum-type name="QCameraImageCapture::Error"/>
-  <enum-type name="QCameraControl::PropertyChangeType"/>
-  <enum-type name="QCameraExposureControl::ExposureParameter"/>
-  <enum-type name="QCamera::State"/>
-  <enum-type name="QCameraExposureControl::ParameterFlag" flags="QCameraExposureControl::ParameterFlags" />
-  <enum-type name="QCameraExposure::ExposureMode"/>
-  <enum-type name="QCameraExposure::MeteringMode"/>
-  <enum-type name="QCameraExposure::FlashMode" flags="QCameraExposure::FlashModes" />
-  <enum-type name="QCameraImageProcessing::WhiteBalanceMode"/>
-  <enum-type name="QCameraFocus::FocusPointMode"/>
-  <enum-type name="QCameraFocus::FocusMode"/>
-  <enum-type name="QCamera::Error"/>
-  <enum-type name="QCamera::LockType" flags="QCamera::LockTypes"/>
-  <enum-type name="QCamera::Status"/>
-  <enum-type name="QCamera::LockStatus"/>
-  <enum-type name="QCamera::CaptureMode"/>
-  <enum-type name="QCamera::LockChangeReason"/>
+  <enum-type name="QCameraImageProcessingControl::ProcessingParameter" since="1.1"/>
+  <enum-type name="QCameraImageCapture::DriveMode" since="1.1"/>
+  <enum-type name="QCameraImageCapture::Error" since="1.1"/>
+  <enum-type name="QCameraControl::PropertyChangeType" since="1.1"/>
+  <enum-type name="QCameraExposureControl::ExposureParameter" since="1.1"/>
+  <enum-type name="QCamera::State" since="1.1"/>
+  <enum-type name="QCameraExposureControl::ParameterFlag" flags="QCameraExposureControl::ParameterFlags"  since="1.1"/>
+  <enum-type name="QCameraExposure::ExposureMode" since="1.1"/>
+  <enum-type name="QCameraExposure::MeteringMode" since="1.1"/>
+  <enum-type name="QCameraExposure::FlashMode" flags="QCameraExposure::FlashModes"  since="1.1"/>
+  <enum-type name="QCameraImageProcessing::WhiteBalanceMode" since="1.1"/>
+  <enum-type name="QCameraFocus::FocusPointMode" since="1.1"/>
+  <enum-type name="QCameraFocus::FocusMode" since="1.1"/>
+  <enum-type name="QCamera::Error" since="1.1"/>
+  <enum-type name="QCamera::LockType" flags="QCamera::LockTypes" since="1.1"/>
+  <enum-type name="QCamera::Status" since="1.1"/>
+  <enum-type name="QCamera::LockStatus" since="1.1"/>
+  <enum-type name="QCamera::CaptureMode" since="1.1"/>
+  <enum-type name="QCamera::LockChangeReason" since="1.1"/>
   <enum-type name="QVideoFrame::FieldType"/>
   <enum-type name="QVideoFrame::PixelFormat"/>
   <enum-type name="QVideoSurfaceFormat::Direction"/>
@@ -166,57 +166,57 @@
     </modify-function>
   </object-type>
   <object-type name="QAudioSystemPlugin" />
-  <object-type name="QCamera" />
-  <object-type name="QCameraControl">
+  <object-type name="QCamera"  since="1.1"/>
+  <object-type name="QCameraControl" since="1.1">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">
         <replace from="%CLASS_NAME" to="QCameraControl" />
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraExposure" />
-  <object-type name="QCameraExposureControl">
+  <object-type name="QCameraExposure"  since="1.1"/>
+  <object-type name="QCameraExposureControl" since="1.1">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">
         <replace from="%CLASS_NAME" to="QCameraExposureControl" />
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraFocus" />
-  <object-type name="QCameraFocusControl">
+  <object-type name="QCameraFocus"  since="1.1"/>
+  <object-type name="QCameraFocusControl" since="1.1">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">
         <replace from="%CLASS_NAME" to="QCameraFocusControl" />
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraFocusZone">
+  <object-type name="QCameraFocusZone" since="1.1">
     <enum-type name="FocusZoneStatus" />
   </object-type>
-  <object-type name="QCameraImageCapture" />
-  <object-type name="QCameraImageCaptureControl">
+  <object-type name="QCameraImageCapture"  since="1.1"/>
+  <object-type name="QCameraImageCaptureControl" since="1.1">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">
         <replace from="%CLASS_NAME" to="QCameraImageCaptureControl" />
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraImageProcessing" />
-  <object-type name="QCameraImageProcessingControl">
+  <object-type name="QCameraImageProcessing"  since="1.1"/>
+  <object-type name="QCameraImageProcessingControl" since="1.1">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">
         <replace from="%CLASS_NAME" to="QCameraImageProcessingControl" />
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraLocksControl">
+  <object-type name="QCameraLocksControl" since="1.1">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">
         <replace from="%CLASS_NAME" to="QCameraLocksControl" />
       </insert-template>
     </inject-code>
   </object-type>
-  <object-type name="QCameraViewfinder" />
+  <object-type name="QCameraViewfinder"  since="1.1"/>
   <object-type name="QGraphicsVideoItem" />
   <object-type name="QImageEncoderControl">
     <inject-code class="target" position="end">
