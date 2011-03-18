@@ -10,7 +10,9 @@ if(${QT_MOBILITY_VERSITORGANIZER_FOUND})
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerimporterpropertyhandler_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/versit_module_wrapper.cpp
     )
+    message("Module Versit - QtVersitOrganizer extensions enabled.")
 else()
+    message("Module Versit - QtVersitOrganizer extensions disabled.")
     set(VersitOrganizer_SRC )
 endif()
 
@@ -25,12 +27,6 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitcontactimpo
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitcontactimporterpropertyhandlerv2_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitdefaultresourcehandler_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitdocument_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerexporter_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerexporterdetailhandler_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerhandler_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerhandlerfactory_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerimporter_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitorganizerimporterpropertyhandler_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitproperty_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitreader_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Versit/qtmobility_qversitresourcehandler_wrapper.cpp
@@ -68,14 +64,22 @@ ${QT_MOBILITY_ORGANIZER_LIBRARY}
 ${QT_MOBILITY_VERSIT_LIBRARY}
 ${QT_MOBILITY_VERSITORGANIZER_LIBRARY}
 )
-set(Versit_TYPESYSTEM_PATHS "${Contacts_SOURCE_DIR}:${Organizer_SOURCE_DIR}")
-CREATE_PYSIDE_MODULE(Versit
+set(Versit_TYPESYSTEM_PATHS "${Versit_SOURCE_DIR}:${Contacts_SOURCE_DIR}")
+set(Versit_TYPESYSTEM "${Versit_SOURCE_DIR}/typesystem_versit.xml")
+
+if(${QT_MOBILITY_VERSITORGANIZER_FOUND})
+    set(Versit_TYPESYSTEM_PATHS "${Versit_TYPESYSTEM_PATHS}:${Organizer_SOURCE_DIR}")
+    set(Versit_TYPESYSTEM "${Versit_SOURCE_DIR}/typesystem_versitorganizer.xml")
+endif()
+
+
+CREATE_PYSIDE_MODULE_WITH_TYPESYSTEM(Versit
                      ${QT_MOBILITY_VERSIT_INCLUDE_DIR}:${QT_MOBILITY_CONTACTS_INCLUDE_DIR}:${QT_MOBILITY_ORGANIZER_INCLUDE_DIR}:${QT_MOBILITY_VERSITORGANIZER_INCLUDE_DIR}
                      Versit_SRC
                      Versit_INCLUDE_DIRECTORIES
                      Versit_LINK_LIBRARIES
-                     Versit_TYPESYSTEM_PATHS)
-
+                     Versit_TYPESYSTEM_PATHS
+                     ${Versit_TYPESYSTEM})
 
 add_dependencies(Versit Contacts Organizer)
 

@@ -1,13 +1,10 @@
 <?xml version="1.0"?>
 <typesystem package="QtMobility.Versit">
     <load-typesystem name="typesystem_contacts.xml" generate="no"/>
-    <load-typesystem name="typesystem_organizer.xml" generate="no"/>
 
     <enum-type name="QtMobility::QVersitContactExporter::Error"/>
     <enum-type name="QtMobility::QVersitContactImporter::Error"/>
     <enum-type name="QtMobility::QVersitDocument::VersitType"/>
-    <enum-type name="QtMobility::QVersitOrganizerExporter::Error"/>
-    <enum-type name="QtMobility::QVersitOrganizerImporter::Error"/>
     <enum-type name="QtMobility::QVersitProperty::ValueType"/>
     <enum-type name="QtMobility::QVersitReader::Error"/>
     <enum-type name="QtMobility::QVersitReader::State"/>
@@ -23,12 +20,6 @@
     <object-type name="QtMobility::QVersitContactImporterPropertyHandler"/>
     <object-type name="QtMobility::QVersitContactImporterPropertyHandlerV2"/>
     <value-type name="QtMobility::QVersitDocument" hash-function="qHash"/>
-    <object-type name="QtMobility::QVersitOrganizerExporter" />
-    <object-type name="QtMobility::QVersitOrganizerExporterDetailHandler" />
-    <object-type name="QtMobility::QVersitOrganizerHandler" />
-    <object-type name="QtMobility::QVersitOrganizerHandlerFactory" />
-    <object-type name="QtMobility::QVersitOrganizerImporter" />
-    <object-type name="QtMobility::QVersitOrganizerImporterPropertyHandler"/>
     <value-type name="QtMobility::QVersitProperty" hash-function="qHash"/>
     <object-type name="QtMobility::QVersitReader">
         <modify-function signature="waitForFinished(int)" allow-thread="yes"/>

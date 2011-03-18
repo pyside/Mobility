@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Versit">
+    <load-typesystem name="typesystem_contacts.xml" generate="no"/>
+    <load-typesystem name="typesystem_organizer.xml" generate="no"/>
+
+    <load-typesystem name="typesystem_versit.xml" generate="yes"/>
+    <enum-type name="QtMobility::QVersitOrganizerExporter::Error"/>
+    <enum-type name="QtMobility::QVersitOrganizerImporter::Error"/>
+    <object-type name="QtMobility::QVersitOrganizerExporter" />
+    <object-type name="QtMobility::QVersitOrganizerExporterDetailHandler" />
+    <object-type name="QtMobility::QVersitOrganizerHandler" />
+    <object-type name="QtMobility::QVersitOrganizerHandlerFactory" />
+    <object-type name="QtMobility::QVersitOrganizerImporter" />
+    <object-type name="QtMobility::QVersitOrganizerImporterPropertyHandler"/>
+</typesystem>
