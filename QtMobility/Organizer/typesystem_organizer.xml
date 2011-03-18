@@ -33,6 +33,16 @@
         <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all" /> 
     </object-type>
     -->
+
+    <object-type name="QtMobility::QOrganizerCollectionFetchRequest" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerCollectionId" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerCollectionRemoveRequest" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerCollectionSaveRequest" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerItemCollectionFilter" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerItemFetchByIdRequest" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerItemObserver" since="1.2"/>
+    <object-type name="QtMobility::QOrganizerManagerEngineV2" since="1.2"/>
+
     <object-type name="QtMobility::QOrganizerEvent" />
     <object-type name="QtMobility::QOrganizerEventOccurrence" />
     <object-type name="QtMobility::QOrganizerEventTime" />
@@ -87,10 +97,8 @@
     <object-type name="QtMobility::QOrganizerJournal" />
     <object-type name="QtMobility::QOrganizerJournalTime" />
     <object-type name="QtMobility::QOrganizerManager" />
-    <!-- Backend classes
     <object-type name="QtMobility::QOrganizerManagerEngine" />
-    <object-type name="QtMobility::QOrganizerManagerEngineFactory" />
-    -->
+    <!--<object-type name="QtMobility::QOrganizerManagerEngineFactory" />-->
     <object-type name="QtMobility::QOrganizerNote" />
     <value-type name="QtMobility::QOrganizerRecurrenceRule" />
     <object-type name="QtMobility::QOrganizerTodo" />

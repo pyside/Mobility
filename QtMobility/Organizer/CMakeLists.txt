@@ -1,5 +1,20 @@
 project(Organizer)
 
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 2)
+    set(Organizer_12_SRC )
+else()
+    set(Organizer_12_SRC
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionfetchrequest_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemfetchbyidrequest_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemcollectionfilter_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionid_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemobserver_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizermanagerenginev2_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionremoverequest_wrapper.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionsaverequest_wrapper.cpp
+    )
+endif()
+
 set(Organizer_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizerabstractrequest_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionchangeset_wrapper.cpp
@@ -52,7 +67,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritem_
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizerjournaltime_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizerjournal_wrapper.cpp
 #${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizermanagerenginefactory_wrapper.cpp
-#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizermanagerengine_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizermanagerengine_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizermanager_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizernote_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizerrecurrencerule_wrapper.cpp
@@ -61,6 +76,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizertodop
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizertodotime_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizertodo_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/organizer_module_wrapper.cpp
+${Organizer_12_SRC}
 )
 
 set(Organizer_INCLUDE_DIRECTORIES
