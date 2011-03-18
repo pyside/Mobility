@@ -13,12 +13,12 @@
 
     <value-type name="QtMobility::QVersitContactExporter"/>
     <object-type name="QtMobility::QVersitContactExporterDetailHandler"/>
-    <object-type name="QtMobility::QVersitContactExporterDetailHandlerV2"/>
-    <object-type name="QtMobility::QVersitContactHandler"/>
-    <object-type name="QtMobility::QVersitContactHandlerFactory"/>
+    <object-type name="QtMobility::QVersitContactExporterDetailHandlerV2" since="1.1"/>
+    <object-type name="QtMobility::QVersitContactHandler" since="1.1"/>
+    <object-type name="QtMobility::QVersitContactHandlerFactory" since="1.1"/>
     <value-type name="QtMobility::QVersitContactImporter"/>
     <object-type name="QtMobility::QVersitContactImporterPropertyHandler"/>
-    <object-type name="QtMobility::QVersitContactImporterPropertyHandlerV2"/>
+    <object-type name="QtMobility::QVersitContactImporterPropertyHandlerV2" since="1.1"/>
     <value-type name="QtMobility::QVersitDocument" hash-function="qHash"/>
     <value-type name="QtMobility::QVersitProperty" hash-function="qHash"/>
     <object-type name="QtMobility::QVersitReader">
