@@ -48,6 +48,16 @@
     <object-type name="QtMobility::QTapReading" />
     <object-type name="QtMobility::QTapSensor" />
 
+    <!-- 1.2 classes -->
+    <object-type name="QtMobility::QGyroscope" since="1.2"/>
+    <object-type name="QtMobility::QGyroscopeFilter" since="1.2"/>
+    <object-type name="QtMobility::QGyroscopeReading" since="1.2"/>
+    <object-type name="QtMobility::QLightFilter" since="1.2"/>
+    <object-type name="QtMobility::QLightReading" since="1.2"/>
+    <object-type name="QtMobility::QLightSensor" since="1.2"/>
+    <object-type name="QtMobility::QSensorChangesInterface" since="1.2"/>
+
+
 
   <suppress-warning text="Shadowing: QSensor::reading() const and *::reading() const" />
   <suppress-warning text="Final class 'QSensorReading' set to non-final, as it is extended by other classes" />

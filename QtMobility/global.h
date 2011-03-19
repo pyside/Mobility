@@ -303,6 +303,18 @@
 #include <QTapFilter>
 #include <QTapSensor>
 
+// Sensor 1.2
+
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 2, 0))
+#include <QGyroscope>
+#include <QGyroscopeFilter>
+#include <QGyroscopeReading>
+#include <QLightFilter>
+#include <QLightReading>
+#include <QLightSensor>
+#include <QSensorChangesInterface>
+#endif
+
 //Versit
 #include <QVersitContactExporter>
 #include <QVersitContactExporterDetailHandler>

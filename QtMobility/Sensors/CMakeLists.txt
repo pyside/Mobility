@@ -1,5 +1,20 @@
 project(Sensors)
 
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 2)
+    set(Sensors_12_SRC )
+else()
+    set(Sensors_12_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qgyroscope_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qgyroscopefilter_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qgyroscopereading_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qlightfilter_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qlightreading_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qlightsensor_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qsensorchangesinterface_wrapper.cpp
+    )
+endif()
+
+
 set(Sensors_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qaccelerometerfilter_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qaccelerometerreading_wrapper.cpp
@@ -34,6 +49,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qtapfilter_wrappe
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qtapreading_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/qtmobility_qtapsensor_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Sensors/sensors_module_wrapper.cpp
+${Sensors_12_SRC}
 )
 
 set(Sensors_INCLUDE_DIRECTORIES
