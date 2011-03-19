@@ -368,6 +368,10 @@
 #include <qremoteserviceclassregister.h> // where is the include without .h like the others?
 #include <qremoteservicecontrol.h>       // where is the include without .h like the others?
 
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 2, 0))
+#include <QRemoteServiceRegister>
+#endif
+
 // PublishSubscribe
 #include <QValueSpacePublisher>
 #include <QValueSpaceSubscriber>

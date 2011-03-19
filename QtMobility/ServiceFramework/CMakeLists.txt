@@ -1,5 +1,13 @@
 project(ServiceFramework)
 
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 2)
+    set(ServiceFramework_12_SRC )
+else()
+    set(ServiceFramework_12_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qremoteserviceregister_wrapper.cpp
+    )
+endif()
+
 set(ServiceFramework_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qabstractsecuritysession_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservice_wrapper.cpp
@@ -9,6 +17,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservice
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qservicemanager_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/qtmobility_qserviceplugininterface_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/ServiceFramework/serviceframework_module_wrapper.cpp
+${ServiceFramework_12_SRC}
 )
 
 set(ServiceFramework_INCLUDE_DIRECTORIES
