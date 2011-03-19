@@ -16,6 +16,20 @@
     <enum-type name="QtMobility::QSystemNetworkInfo::NetworkMode"/>
     <enum-type name="QtMobility::QSystemStorageInfo::DriveType"/>
 
+    <enum-type name="QtMobility::QSystemAlignedTimer::AlignedTimerError" since="1.2"/>
+    <enum-type name="QtMobility::QSystemBatteryInfo::BatteryStatus" since="1.2"/>
+    <enum-type name="QtMobility::QSystemBatteryInfo::ChargerType" since="1.2"/>
+    <enum-type name="QtMobility::QSystemBatteryInfo::ChargingState" since="1.2"/>
+    <enum-type name="QtMobility::QSystemBatteryInfo::EnergyUnit" since="1.2"/>
+    <enum-type name="QtMobility::QSystemDeviceInfo::KeypadType" since="1.2"/>
+    <enum-type name="QtMobility::QSystemDeviceInfo::KeyboardType" flags="QtMobility::QSystemDeviceInfo::KeyboardTypeFlags" since="1.2"/>
+    <enum-type name="QtMobility::QSystemDeviceInfo::LockType" flags="QtMobility::QSystemDeviceInfo::LockTypeFlags"  since="1.2"/>
+    <enum-type name="QtMobility::QSystemDeviceInfo::InputMethod" flags="QtMobility::QSystemDeviceInfo::InputMethodFlags"  since="1.2"/>
+    <enum-type name="QtMobility::QSystemDisplayInfo::BacklightState" since="1.2"/>
+    <enum-type name="QtMobility::QSystemDisplayInfo::DisplayOrientation" since="1.2"/>
+    <enum-type name="QtMobility::QSystemStorageInfo::StorageState" since="1.2"/>
+
+
     <namespace-type name="QtMobility" generate="no"/>
 
     <object-type name="QtMobility::QSystemDeviceInfo" target-lang-name="QSystemDeviceInfo"/>
@@ -24,4 +38,7 @@
     <object-type name="QtMobility::QSystemNetworkInfo" target-lang-name="QSystemNetworkInfo"/>
     <object-type name="QtMobility::QSystemScreenSaver" target-lang-name="QSystemScreenSaver"/>
     <object-type name="QtMobility::QSystemStorageInfo" target-lang-name="QSystemStorageInfo"/>
+
+    <object-type name="QtMobility::QSystemAlignedTimer" target-lang-name="QSystemAlignedTimer" since="1.2"/>
+    <object-type name="QtMobility::QSystemBatteryInfo" target-lang-name="QSystemBatteryInfo" since="1.2"/>
 </typesystem>

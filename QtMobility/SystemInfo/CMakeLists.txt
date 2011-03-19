@@ -1,5 +1,15 @@
 project(SystemInfo)
 
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 2)
+    set(SystemInfo_12_SRC )
+else()
+    set(SystemInfo_12_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemalignedtimer_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystembatteryinfo_wrapper.cpp
+    )
+endif()
+
+
 set(SystemInfo_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemdeviceinfo_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemdisplayinfo_wrapper.cpp
@@ -8,6 +18,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemnetwork
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemscreensaver_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/qtmobility_qsystemstorageinfo_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/SystemInfo/systeminfo_module_wrapper.cpp
+${SystemInfo_12_SRC}
 )
 
 set(SystemInfo_INCLUDE_DIRECTORIES

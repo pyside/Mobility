@@ -14,6 +14,17 @@
 // SysInfo
 #include <qsysteminfo.h>
 
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 2, 0))
+#include <QSystemAlignedTimer>
+#include <QSystemBatteryInfo>
+#include <QSystemDeviceInfo>
+#include <QSystemDisplayInfo>
+#include <QSystemInfo>
+#include <QSystemNetworkInfo>
+#include <QSystemScreenSaver>
+#include <QSystemStorageInfo>
+#endif
+
 // Location
 #include <QGeoAreaMonitor>
 #include <QGeoCoordinate>
