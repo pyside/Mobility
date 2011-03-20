@@ -30,4 +30,6 @@
         <modify-function signature="waitForFinished(int)" allow-thread="yes"/>
     </object-type>
 
+    <object-type name="QtMobility::QVersitTimeZoneHandler" since="1.2"/>
+
 </typesystem>

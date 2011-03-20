@@ -342,6 +342,10 @@
 #include <QVersitResourceHandler>
 #include <QVersitWriter>
 
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 2, 0))
+#include <QVersitTimeZoneHandler>
+#endif
+
 // VersitOrganizer
 
 #include <qversitorganizerexporter.h>
