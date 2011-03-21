@@ -111,6 +111,39 @@
 #include <QNetworkSession>
 #endif
 
+// Connectivity
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 2, 0))
+#include <QBluetoothAddress>
+#include <QBluetoothDeviceDiscoveryAgent>
+#include <QBluetoothDeviceInfo>
+#include <QBluetoothHostInfo>
+#include <QBluetoothLocalDevice>
+#include <QBluetoothServiceDiscoveryAgent>
+#include <QBluetoothServiceInfo>
+#include <QBluetoothSocket>
+#include <QBluetoothTransferManager>
+#include <QBluetoothTransferReply>
+#include <QBluetoothTransferRequest>
+#include <QBluetoothUuid>
+#include <QL2capServer>
+#include <QL2capSocket>
+#include <QLlcpServer>
+#include <QLlcpSocket>
+#include <QNdefFilter>
+#include <QNdefMessage>
+#include <QNdefNfcTextRecord>
+#include <QNdefNfcUriRecord>
+#include <QNdefRecord>
+#include <QNearFieldManager>
+#include <QNearFieldTagType1>
+#include <QNearFieldTagType2>
+#include <QNearFieldTagType3>
+#include <QNearFieldTagType4>
+#include <QNearFieldTarget>
+#include <QRfcommServer>
+#include <QRfcommSocket>
+#endif
+
 // Contacts
 #include <qtcontacts.h>
 #include <qcontactchangeset.h>

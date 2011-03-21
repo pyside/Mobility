@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<typesystem package="QtMobility.Connectivity">
+    <load-typesystem name="typesystem_core.xml" generate="no"/>
+    <load-typesystem name="typesystem_network.xml" generate="no"/>
+    <load-typesystem name="typesystem_templates.xml" generate="no"/>
+
+    <namespace-type name="QtMobility" generate="no">
+
+        <enum-type name="QBluetoothSocket::SocketState" />
+        <enum-type name="QBluetoothUuid::ServiceClassUuid" />
+        <!-- <enum-type name="QNdefRecord::TypeNameFormat" /> -->
+        <enum-type name="QBluetoothDeviceInfo::MinorAudioVideoClass" />
+        <enum-type name="QBluetoothTransferReply::TransferError" />
+        <enum-type name="QBluetoothDeviceInfo::MinorPeripheralClass" />
+        <enum-type name="QBluetoothTransferRequest::Attribute" />
+        <enum-type name="QNearFieldTagType1::WriteMode" />
+        <enum-type name="QBluetoothServiceInfo::AttributeId" />
+        <enum-type name="QLlcpSocket::SocketState" />
+        <enum-type name="QBluetoothLocalDevice::HostMode" />
+        <enum-type name="QBluetoothLocalDevice::Pairing" />
+        <enum-type name="QBluetoothDeviceInfo::DataCompleteness" />
+        <enum-type name="QBluetoothServiceInfo::Protocol" />
+        <!-- <enum-type name="QNearFieldTarget::Type" /> -->
+        <enum-type name="QNdefNfcTextRecord::Encoding" />
+        <enum-type name="QBluetoothSocket::SocketType" />
+        <enum-type name="QBluetoothDeviceInfo::MinorNetworkClass" />
+        <enum-type name="QBluetoothDeviceInfo::MinorWearableClass" />
+        <enum-type name="QBluetoothDeviceInfo::MinorToyClass" />
+        <enum-type name="QBluetoothServiceDiscoveryAgent::DiscoveryMode" />
+        <enum-type name="QNearFieldManager::TargetAccessMode" />
+        <enum-type name="QBluetoothLocalDevice::Error" />
+        <!-- <enum-type name="QNearFieldTarget::AccessMethod" /> -->
+        <enum-type name="QLlcpSocket::SocketError" />
+        <enum-type name="QBluetoothDeviceInfo::MinorPhoneClass" />
+        <enum-type name="QBluetoothDeviceDiscoveryAgent::InquiryType" />
+        <enum-type name="QBluetoothUuid::ProtocolUuid" />
+        <enum-type name="QBluetoothDeviceInfo::MinorImagingClass" />
+        <enum-type name="QBluetoothDeviceDiscoveryAgent::Error" />
+        <enum-type name="QNearFieldTarget::Error" />
+        <enum-type name="QBluetoothDeviceInfo::MinorComputerClass" />
+        <enum-type name="QBluetoothTransferManager::Operation" />
+        <enum-type name="QBluetoothSocket::SocketError" />
+        <enum-type name="QBluetoothServiceDiscoveryAgent::Error" />
+        <enum-type name="QBluetoothDeviceInfo::ServiceClass" />
+        <enum-type name="QBluetoothDeviceInfo::MajorDeviceClass" />
+        <enum-type name="QBluetoothDeviceInfo::MinorHealthClass" />
+        <enum-type name="QBluetoothDeviceInfo::MinorMiscellaneousClass" />
+
+        <object-type name="QBluetoothAddress"/>
+        <object-type name="QBluetoothDeviceDiscoveryAgent"/>
+        <object-type name="QBluetoothDeviceInfo"/>
+        <object-type name="QBluetoothHostInfo"/>
+        <object-type name="QBluetoothLocalDevice"/>
+        <object-type name="QBluetoothServiceDiscoveryAgent"/>
+        <object-type name="QBluetoothServiceInfo"/>
+        <object-type name="QBluetoothSocket"/>
+        <object-type name="QBluetoothTransferManager"/>
+        <object-type name="QBluetoothTransferReply">
+            <modify-function signature="setManager(QtMobility::QBluetoothTransferManager&amp;)" remove="all" />
+            <modify-function signature="setAttribute(QtMobility::QBluetoothTransferRequest::Attribute,QVariant)" remove="all" />
+        </object-type>
+        <object-type name="QBluetoothTransferRequest"/>
+        <object-type name="QBluetoothUuid">
+            <add-function signature="__repr__" return-type="PyObject*">
+                <inject-code class="target" position="beginning">
+                    <insert-template name="repr_code">
+                        <replace from="%REPR_FORMAT" to="'%s'" />
+                        <replace from="%REPR_ARGS" to="qPrintable(%CPPSELF.toString())" />
+                    </insert-template>
+                </inject-code>
+            </add-function>
+        </object-type>
+        <!-- <object-type name="QL2capServer"/>
+        <object-type name="QL2capSocket"/>
+        <object-type name="QLlcpServer"/>
+        <object-type name="QLlcpSocket"/>
+        <object-type name="QNdefFilter">
+            <modify-function signature="appendRecord(uint, uint)" remove="all" />
+        </object-type>
+        <object-type name="QNdefMessage"/>
+        <object-type name="QNdefNfcTextRecord"/>
+        <object-type name="QNdefNfcUriRecord"/>
+        <object-type name="QNdefRecord"/>
+        <object-type name="QNearFieldManager"/>
+        <object-type name="QNearFieldTagType1"/>
+        <object-type name="QNearFieldTagType2"/>
+        <object-type name="QNearFieldTagType3"/>
+        <object-type name="QNearFieldTagType4"/>
+        <object-type name="QNearFieldTarget"/>
+        <object-type name="QRfcommServer"/>
+        <object-type name="QRfcommSocket"/> -->
+    </namespace-type>
+</typesystem>
