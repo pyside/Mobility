@@ -215,6 +215,12 @@
 #include <QCameraLocksControl>
 #include <QCameraViewfinder>
 
+#if (QTM_VERSION >= QTM_VERSION_CHECK(1, 2, 0))
+#include <QMediaNetworkAccessControl>
+#include <QCameraFlashControl>
+#endif
+
+
 //Organizer
 //avoid header inclusion
 #define QTORGANIZERGLOBAL_H

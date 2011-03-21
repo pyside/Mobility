@@ -182,6 +182,13 @@
       </insert-template>
     </inject-code>
   </object-type>
+  <object-type name="QCameraFlashControl" since="1.2">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QCameraFlashControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QCameraFocus"  since="1.1"/>
   <object-type name="QCameraFocusControl" since="1.1">
     <inject-code class="target" position="end">
@@ -241,6 +248,13 @@
   <value-type name="QImageEncoderSettings" />
   <object-type name="QMediaImageViewer" />
   <object-type name="QMediaObject" />
+  <object-type name="QMediaNetworkAccessControl" since="1.2">
+    <inject-code class="target" position="end">
+      <insert-template name="class_iid">
+        <replace from="%CLASS_NAME" to="QMediaNetworkAccessControl" />
+      </insert-template>
+    </inject-code>
+  </object-type>
   <object-type name="QMediaPlayerControl">
     <inject-code class="target" position="end">
       <insert-template name="class_iid">

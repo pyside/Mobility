@@ -1,5 +1,15 @@
 project(MultimediaKit)
 
+
+if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 2)
+    set(MultimediaKit_12_SRC )
+else()
+    set(MultimediaKit_12_SRC
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraflashcontrol_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qmedianetworkaccesscontrol_wrapper.cpp
+    )
+endif()
+
 if(${QT_MOBILITY_MAJOR_VERSION} EQUAL 1 AND ${QT_MOBILITY_MINOR_VERSION} LESS 1)
     set(MultimediaKit_11_SRC )
 else()
@@ -17,6 +27,7 @@ else()
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcameraviewfinder_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamera_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/MultimediaKit/qcamerafocuszone_wrapper.cpp
+    ${MultimediaKit_12_SRC}
     )
 endif()
 
