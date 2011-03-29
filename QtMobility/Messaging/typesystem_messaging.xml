@@ -21,6 +21,7 @@
     <value-type name="QtMobility::QMessageContentContainerId" />
     <namespace-type name="QtMobility::QMessageDataComparator" />
     <enum-type name="QtMobility::QMessageDataComparator::EqualityComparator" />
+    <enum-type name="QtMobility::QMessageDataComparator::LikeComparator" />
     <enum-type name="QtMobility::QMessageDataComparator::InclusionComparator" />
     <enum-type name="QtMobility::QMessageDataComparator::RelationComparator" />
     <enum-type name="QtMobility::QMessageDataComparator::MatchFlag" flags="QtMobility::QMessageDataComparator::MatchFlags" />
@@ -29,12 +30,6 @@
              Tracked in pyside: http://bugs.openbossa.org/show_bug.cgi?id=701 -->
         <modify-function signature="byRecipients(const QString&amp;, QtMobility::QMessageDataComparator::EqualityComparator)" remove="all"/>
         <modify-function signature="byRecipients(const QString&amp;, QtMobility::QMessageDataComparator::InclusionComparator)" remove="all"/>
-        <modify-function signature="byTo(const QString&amp;, QtMobility::QMessageDataComparator::EqualityComparator)" remove="all"/>
-        <modify-function signature="byTo(const QString&amp;, QtMobility::QMessageDataComparator::InclusionComparator)" remove="all"/>
-        <modify-function signature="byCc(const QString&amp;, QtMobility::QMessageDataComparator::EqualityComparator)" remove="all"/>
-        <modify-function signature="byCc(const QString&amp;, QtMobility::QMessageDataComparator::InclusionComparator)" remove="all"/>
-        <modify-function signature="byBcc(const QString&amp;, QtMobility::QMessageDataComparator::EqualityComparator)" remove="all"/>
-        <modify-function signature="byBcc(const QString&amp;, QtMobility::QMessageDataComparator::InclusionComparator)" remove="all"/>
     </value-type>
     <value-type name="QtMobility::QMessageFolder" />
     <value-type name="QtMobility::QMessageFolderFilter" />
