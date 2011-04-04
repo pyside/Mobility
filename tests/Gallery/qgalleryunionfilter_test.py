@@ -54,6 +54,8 @@ class UnionFilterAppend(unittest.TestCase):
         self.assertFalse(unionFilter.isEmpty())
         self.assertEqual(unionFilter.filterCount(), 8)
 
+        filters = unionFilter.filters()
+
         self.assertEqual(filters[0].type(), QGalleryFilter.MetaData)
         self.assertEqual(filters[1].type(), QGalleryFilter.MetaData)
         self.assertEqual(filters[2].type(), QGalleryFilter.Intersection)
@@ -107,6 +109,8 @@ class UnionFilterPrepend(unittest.TestCase):
         unionFilter.prepend(unionFilter)
         self.assertFalse(unionFilter.isEmpty())
         self.assertEqual(unionFilter.filterCount(), 8)
+
+        filters = unionFilter.filters()
 
         self.assertEqual(filters[0].type(), QGalleryFilter.MetaData)
         self.assertEqual(filters[1].type(), QGalleryFilter.MetaData)

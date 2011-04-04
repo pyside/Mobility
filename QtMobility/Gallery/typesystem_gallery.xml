@@ -18,9 +18,68 @@
     <value-type name="QtMobility::QGalleryFilter" />
     <enum-type name="QtMobility::QGalleryFilter::Type" />
     <enum-type name="QtMobility::QGalleryFilter::Comparator" />
-    <value-type name="QtMobility::QGalleryIntersectionFilter" />
-    <value-type name="QtMobility::QGalleryUnionFilter" />
-    <value-type name="QtMobility::QGalleryMetaDataFilter" />
+    <value-type name="QtMobility::QGalleryIntersectionFilter">
+        <modify-function signature="QGalleryIntersectionFilter(const QtMobility::QGalleryUnionFilter&amp;)" remove="all"/>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryUnionFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryMetaDataFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryIntersectionFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+    </value-type>
+    <value-type name="QtMobility::QGalleryUnionFilter">
+        <modify-function signature="QGalleryUnionFilter(const QtMobility::QGalleryIntersectionFilter&amp;)" remove="all"/>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryUnionFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryMetaDataFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryIntersectionFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+    </value-type>
+    <value-type name="QtMobility::QGalleryMetaDataFilter">
+        <add-function signature="operator&amp;(const QtMobility::QGalleryUnionFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryMetaDataFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+        <add-function signature="operator&amp;(const QtMobility::QGalleryIntersectionFilter&amp;)" return-type="QtMobility::QGalleryIntersectionFilter">
+            <inject-code class="target" position="beginning">
+                QGalleryIntersectionFilter filt = *%CPPSELF &amp;&amp; %1;
+                return %CONVERTTOPYTHON[QGalleryIntersectionFilter](filt);
+            </inject-code>
+        </add-function>
+    </value-type>
 
     <object-type name="QtMobility::QGalleryItemRequest" />
     <object-type name="QtMobility::QGalleryProperty">

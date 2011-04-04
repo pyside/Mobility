@@ -13,7 +13,8 @@ class IntersectionOperator(unittest.TestCase):
         metaDataFilter = QGalleryMetaDataFilter()
         intersectionFilter = QGalleryIntersectionFilter()
 
-        intersectionFilter = metaDataFilter and intersectionFilter
+        intersectionFilter = metaDataFilter & intersectionFilter
+        self.assertEqual(type(intersectionFilter), QGalleryIntersectionFilter)
         self.assertTrue(intersectionFilter.isValid(), True)
         self.assertFalse(intersectionFilter.isEmpty())
         self.assertEqual(intersectionFilter.filterCount(), 1)
@@ -28,7 +29,8 @@ class IntersectionOperator(unittest.TestCase):
         metaDataFilter = QGalleryMetaDataFilter()
         unionFilter = QGalleryUnionFilter()
 
-        intersectionFilter = metaDataFilter and unionFilter
+        intersectionFilter = metaDataFilter & unionFilter
+        self.assertEqual(type(intersectionFilter), QGalleryIntersectionFilter)
         self.assertTrue(intersectionFilter.isValid(), True)
         self.assertFalse(intersectionFilter.isEmpty())
         self.assertEqual(intersectionFilter.filterCount(), 2)
@@ -44,7 +46,8 @@ class IntersectionOperator(unittest.TestCase):
         metaDataFilter = QGalleryMetaDataFilter()
         unionFilter = QGalleryUnionFilter()
 
-        intersectionFilter = unionFilter and metaDataFilter
+        intersectionFilter = unionFilter & metaDataFilter
+        self.assertEqual(type(intersectionFilter), QGalleryIntersectionFilter)
         self.assertTrue(intersectionFilter.isValid(), True)
         self.assertFalse(intersectionFilter.isEmpty())
         self.assertEqual(intersectionFilter.filterCount(), 2)
@@ -60,8 +63,10 @@ class IntersectionOperator(unittest.TestCase):
         metaDataFilter = QGalleryMetaDataFilter()
         unionFilter = QGalleryUnionFilter()
 
-        intersectionFilter = unionFilter and metaDataFilter
-        intersectionFilter = intersectionFilter and metaDataFilter
+        intersectionFilter = unionFilter & metaDataFilter
+        self.assertEqual(type(intersectionFilter), QGalleryIntersectionFilter)
+        intersectionFilter = intersectionFilter & metaDataFilter
+        self.assertEqual(type(intersectionFilter), QGalleryIntersectionFilter)
 
         self.assertTrue(intersectionFilter.isValid(), True)
         self.assertFalse(intersectionFilter.isEmpty())
