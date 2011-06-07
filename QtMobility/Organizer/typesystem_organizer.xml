@@ -2,10 +2,10 @@
 <typesystem package="QtMobility.Organizer">
     <load-typesystem name="typesystem_core.xml" generate="no"/>
     <namespace-type name="QtMobility" generate="no"/>
- 
-    <!-- This type is declared here only to be used by a remove-function tag below --> 
+
+    <!-- This type is declared here only to be used by a remove-function tag below -->
     <object-type name="QDebug" generate="no" />
-    
+
     <enum-type name="QtMobility::QOrganizerAbstractRequest::RequestType" />
     <enum-type name="QtMobility::QOrganizerAbstractRequest::State" />
     <enum-type name="QtMobility::QOrganizerItemChangeLogFilter::EventType" />
@@ -24,15 +24,24 @@
     <enum-type name="QtMobility::QOrganizerRecurrenceRule::Month" />
     <enum-type name="QtMobility::QOrganizerRecurrenceRule::Frequency" />
     <enum-type name="QtMobility::QOrganizerRecurrenceRule::LimitType" />
-    
+
     <object-type name="QtMobility::QOrganizerAbstractRequest" />
     <value-type name="QtMobility::QOrganizerCollection" />
     <value-type name="QtMobility::QOrganizerCollectionChangeSet" />
-    <!-- Commented out due to bug #485; backend class
     <object-type name="QtMobility::QOrganizerCollectionEngineId" >
-        <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all" /> 
+        <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all">
+            <modify-argument index="return">
+                <replace-default-expression with="%1"/>
+            </modify-argument>
+        </modify-function>
     </object-type>
-    -->
+    <object-type name="QtMobility::QOrganizerItemEngineId">
+        <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all">
+            <modify-argument index="return">
+                <replace-default-expression with="%1"/>
+            </modify-argument>
+        </modify-function>
+    </object-type>
 
     <object-type name="QtMobility::QOrganizerCollectionFetchRequest" since="1.2"/>
     <object-type name="QtMobility::QOrganizerCollectionId" since="1.2"/>
@@ -62,11 +71,7 @@
     <value-type name="QtMobility::QOrganizerItemDetailRangeFilter" />
     <object-type name="QtMobility::QOrganizerItemDisplayLabel" />
     <object-type name="QtMobility::QOrganizerItemEmailReminder" />
-    <!-- Commented out due to bug #485; backend class
-    <object-type name="QtMobility::QOrganizerItemEngineId">
-        <modify-function signature="debugStreamOut(QDebug&amp;)const" remove="all" />·
-    </object-type>
-    -->
+
     <object-type name="QtMobility::QOrganizerItemFetchForExportRequest" />
     <value-type name="QtMobility::QOrganizerItemFetchHint" />
     <object-type name="QtMobility::QOrganizerItemFetchRequest" />
