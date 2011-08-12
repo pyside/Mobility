@@ -57,7 +57,7 @@
         <object-type name="QContactLocalIdFetchRequest" />
         <value-type name="QContactLocalIdFilter" />
         <object-type name="QContactManager">
-        <modify-function signature="saveContacts(QList&lt;QtMobility::QContact&gt;*, QMap&lt;int, QtMobility::QContactManager::Error&gt;*)">
+        <modify-function signature="saveContacts(QList&lt;::QtMobility::QContact&gt;*, QMap&lt;int, ::QtMobility::QContactManager::Error&gt;*)">
             <modify-argument index="1">
             <replace-type modified-type="PySequence" />
             </modify-argument>

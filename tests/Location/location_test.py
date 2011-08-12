@@ -106,8 +106,7 @@ class QtLocationUsage(TimedQApplication):
 
         self.app.exec_()
 
-        self.assertTrue(self.called)
-        self.assertEqual(positions, expectedPositions)
+        self.assertEqual(self.positions, self.expectedPositions)
 
 if __name__ == '__main__':
     unittest.main()
