@@ -18,7 +18,7 @@ endif()
 set(Organizer_SRC
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizerabstractrequest_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionchangeset_wrapper.cpp
-#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionengineid_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollectionengineid_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizercollection_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizereventoccurrence_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizereventtime_wrapper.cpp
@@ -38,7 +38,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemd
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemdetail_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemdisplaylabel_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritememailreminder_wrapper.cpp
-#${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemengineid_wrapper.cpp
+${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemengineid_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemfetchforexportrequest_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemfetchhint_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/${BINDING_NAME}/Organizer/qtmobility_qorganizeritemfetchrequest_wrapper.cpp
