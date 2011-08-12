@@ -10,7 +10,7 @@ macro(QTMOBILITY_TEST)
     else()
         message(WARNING "Ivalid call of macro QTMOBILITY_TEST")
     endif()
-    set(TEST_CMD ${CMAKE_SOURCE_DIR}/tests/run_test.sh  "${CMAKE_BINARY_DIR}:${CMAKE_SOURCE_DIR}/tests/util" ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/${ARGV0}")
+    set(TEST_CMD ${CMAKE_SOURCE_DIR}/tests/run_test.sh  "${CMAKE_BINARY_DIR}:${CMAKE_SOURCE_DIR}/tests/util" ${SHIBOKEN_PYTHON_INTERPRETER} "${CMAKE_CURRENT_SOURCE_DIR}/${ARGV0}")
     add_test(${TEST_NAME} ${TEST_CMD})
     set_tests_properties(${TEST_NAME} PROPERTIES
                          TIMEOUT ${QTMOBILITY_TIMEOUT}
