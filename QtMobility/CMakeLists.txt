@@ -35,7 +35,7 @@ macro(CREATE_PYSIDE_MODULE_WITH_TYPESYSTEM MODULE_NAME MODULE_INCLUDE_DIR SRCS I
                         --output-directory=${CMAKE_CURRENT_BINARY_DIR}
                         --license-file=${CMAKE_CURRENT_SOURCE_DIR}/../licensecomment.txt
                         ${TYPESYSTEM}
-                        --api-version=${QT_MOBILITY_MAJOR_VERSION}.${QT_MOBILITY_MINOR_VERSION}
+                        --api-version="QtMobility*,${QT_MOBILITY_MAJOR_VERSION}.${QT_MOBILITY_MINOR_VERSION}|PySide*,${QT_VERSION_MAJOR}.${QT_VERSION_MINOR}"
                         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
                         COMMENT "Running generator for ${MODULE_NAME}..."
                        )
