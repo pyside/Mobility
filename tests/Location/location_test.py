@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from __future__ import with_statement
+
 import os
 import unittest, sys
 from PySide.QtCore import QFile, QTimer, QObject, QIODevice, QDateTime, Qt, QDate
