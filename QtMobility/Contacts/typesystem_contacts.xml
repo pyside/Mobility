@@ -26,8 +26,17 @@
             </modify-argument>
         </modify-function>
         </object-type>
-        <value-type name="QContactDetail" hash-function="qHash" />
-        <value-type name="QContact" hash-function="qHash" />
+        <!-- Removed const char* overrides, leaving QString ones. const char* converters accept
+             unicode strings but results in empty strings -->
+        <value-type name="QContactDetail" hash-function="qHash">
+            <modify-function signature="value(const char*)const" remove="all" />
+            <modify-function signature="removeValue(const char*)" remove="all" />
+            <modify-function signature="hasValue(const char*)const" remove="all" />
+            <modify-function signature="setValue(const char*, const QVariant&amp;)" remove="all" />
+        </value-type>
+        <value-type name="QContact" hash-function="qHash">
+            <modify-function signature="detail(const char*)const" remove="all" />
+        </value-type>
         <value-type name="QContactAddress" />
         <value-type name="QContactAnniversary" />
         <value-type name="QContactAvatar" />
