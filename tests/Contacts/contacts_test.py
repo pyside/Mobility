@@ -35,5 +35,17 @@ class QtContactsUsage(unittest.TestCase):
 
         self.assert_(cm.removeContact(exampleContact.localId()))
 
+
+class PhoneNumberTest(unittest.TestCase):
+
+    def basicTest(self):
+        number = QContactPhoneNumber()
+        self.assertEqual(number.number(), '')
+
+        subtypes = [QContactPhoneNumber.SubTypeCar, QContactPhoneNumber.SubTypeFax]
+        number.setSubTypes(subtypes)
+        self.assertEqual(number.subTypes(), subtypes)
+        self.assertEqual(number.value(QContactPhoneNumber.FieldSubTypes), subtypes)
+
 if __name__ == '__main__':
     unittest.main()

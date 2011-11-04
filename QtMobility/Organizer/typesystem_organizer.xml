@@ -13,7 +13,7 @@
     <enum-type name="QtMobility::QOrganizerItemDetail::AccessConstraint" />
     <enum-type name="QtMobility::QOrganizerItemFetchHint::OptimizationHint" />
     <enum-type name="QtMobility::QOrganizerItemFilter::FilterType" />
-    <enum-type name="QtMobility::QOrganizerItemFilter::MatchFlag" />
+    <enum-type name="QtMobility::QOrganizerItemFilter::MatchFlag" flags="QtMobility::QOrganizerItemFilter::MatchFlags" />
     <enum-type name="QtMobility::QOrganizerItemManager::Error" />
     <enum-type name="QtMobility::QOrganizerTodoProgress::Status" />
     <enum-type name="QtMobility::QOrganizerItemPriority::Priority" />
