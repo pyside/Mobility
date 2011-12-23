@@ -66,8 +66,11 @@
   <value-type name="QVideoSurfaceFormat"/>
   <object-type name="QAbstractVideoBuffer">
       <modify-function signature="map(QAbstractVideoBuffer::MapMode, int*, int*)">
-          <modify-argument index="0">
-              <replace-type modified-type="PyObject"/>
+          <modify-argument index="return">
+              <replace-type modified-type="PyBuffer"/>
+              <conversion-rule class="native">
+              %RETURN_TYPE %out = (%RETURN_TYPE)Shiboken::Buffer::getPointer(%PYARG_0);
+              </conversion-rule>
           </modify-argument>
           <modify-argument index="2">
               <remove-argument/>
@@ -76,8 +79,13 @@
               <remove-argument/>
           </modify-argument>
           <inject-code class="target" position="beginning">
-              <insert-template name="fix_arg,int*,int*"/>
-          </inject-code>
+	  uchar* _ret;
+	  int numBytes, bytesPerLine;
+	  %BEGIN_ALLOW_THREADS
+	  _ret = %CPPSELF.%FUNCTION_NAME(%1, &amp;numBytes, &amp;bytesPerLine);
+	  %END_ALLOW_THREADS
+	  %PYARG_0 = Shiboken::Buffer::newObject(_ret, numBytes, Shiboken::Buffer::ReadWrite);
+	  </inject-code>
       </modify-function>
   </object-type>
   <object-type name="QAbstractVideoSurface"/>
