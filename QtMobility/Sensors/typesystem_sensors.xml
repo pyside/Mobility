@@ -7,7 +7,20 @@
 
     <primitive-type name="QtMobility::qtimestamp">
         <include file-name="QSensor" location="global" />
-        <conversion-rule file="qtimestamp_conversion.h"/>
+        <conversion-rule>
+            <native-to-target>
+            return PyInt_FromLong((quint64)%in);
+            </native-to-target>
+            <target-to-native>
+                <add-conversion type="PyInt">
+                long value = PyLong_AsLong(%in);
+                %out = QtMobility::qtimestamp(value);
+                </add-conversion>
+                <add-conversion type="PyObject">
+                %out = QtMobility::qtimestamp();
+                </add-conversion>
+            </target-to-native>
+        </conversion-rule>
     </primitive-type>
 
     <enum-type name="QtMobility::QAmbientLightReading::LightLevel" />
