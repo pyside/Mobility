@@ -38,7 +38,7 @@ class MouseHistoryEntry(object):
 
 class MapWidget(QGraphicsGeoMap):
 
-    coordQueryResult = Signal(QGeoCoordinate)
+    coordQueryResult = Signal(list)
 
     def __init__(self, manager):
         QGraphicsGeoMap.__init__(self, manager)
@@ -327,7 +327,7 @@ class MainWindow(QMainWindow):
         self.slider.setMinimum(self.mapManager.minimumZoomLevel())
 
         self.slider.valueChanged[int].connect(self.sliderValueChanged)
-        self.mapWidget.zoomLevelChanged[float].connect(self.mapZoomLevelChanged)
+        self.mapWidget.zoomLevelChanged.connect(self.mapZoomLevelChanged)
 
         mapControlLayout = QVBoxLayout()
 
