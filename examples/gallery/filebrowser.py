@@ -221,7 +221,7 @@ class DocumentPropertiesWidget(QWidget):
             if isinstance(value, list):
                 widget.setText('; '.join(value))
             else:
-                widget.setText(value)
+                widget.setText(unicode(value))
 
 class FileBrowser(QMainWindow):
     """Example file browsing widget. Based of the C++ example."""
